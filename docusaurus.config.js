@@ -7,8 +7,8 @@ const katex = require('rehype-katex');
 const config = {
   title: 'Week的博客',
   titleDelimiter: '-',
-  url: 'https://wrm244.github.io/',//请填写你的网站
-  baseUrl: '/docusaurus-theme-zen/',//建议填写/
+  url: 'https://weeking.cn',//请填写你的网站
+  baseUrl: '/',//建议填写/
   favicon: '/assets/images/social/avatar.ico',
   organizationName: '',
   projectName: 'docusaurus-theme-zen',

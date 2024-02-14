@@ -19,7 +19,7 @@ interface Props {
 export default function BrowserWindow({
   children,
   minHeight,
-  url = 'http://localhost:3000',
+  url = 'https://weeking.cn',
 }: Props): JSX.Element {
   return (
     <div className={styles.browserWindow} style={{minHeight}}>
