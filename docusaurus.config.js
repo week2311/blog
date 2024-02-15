@@ -198,12 +198,11 @@ const config = {
            //  },
 
           {
-              html: `
-                <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
-                  <img src="/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
-                <a/>
-                `,
-            },
+               html: `
+                  <a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /></a>
+                  <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>
+                  `,
+          },
           ],
         },
       ],
