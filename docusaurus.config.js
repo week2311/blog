@@ -179,27 +179,27 @@ const config = {
           //     label: '导航',
           //     to: 'resource',
           //   },
-            {
-              html: `
-                <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
-                  Build with docusaurus
-                <a/>
-                `,
-            },
-            {
-              html: `
-                <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
-                  Built with Netlify
-                <a/>
-                `,
-            },
-           {
-              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="" style="height:50px;margin-top:0.5rem"/></a> <a href="https://www.netlify.com/" target="_blank"><img alt="" style="height:50px;margin-top:0.5rem" /></a>`,
-            },
+           //  {
+           //    html: `
+           //      <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
+           //        Build with docusaurus
+           //      <a/>
+           //      `,
+           //  },
+           //  {
+           //    html: `
+           //      <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
+           //        Built with Netlify
+           //      <a/>
+           //      `,
+           //  },
+           // {
+           //    html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="" style="height:50px;margin-top:0.5rem"/></a> <a href="https://www.netlify.com/" target="_blank"><img alt="" style="height:50px;margin-top:0.5rem" /></a>`,
+           //  },
 
-          //   // {
-          //     // html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>`,
-          //   // },
+          {
+              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>`,
+          },
           ],
         },
       ],
