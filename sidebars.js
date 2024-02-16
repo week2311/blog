@@ -3,6 +3,7 @@ const sidebars = {
   stack: [
     'stack/introduction',
     'stack/test',
+    'stack/kernel-update',
     {
       // label: 'Docusaurus',
       // type: 'category',
