@@ -1,3 +1,10 @@
+---
+id: kernel-update
+slug: /kernel-update
+title: Centos7系统---内核升级
+last_update:
+  date: 2023/02/16
+---
 # Centos7系统---内核升级
 
 ### 前言
