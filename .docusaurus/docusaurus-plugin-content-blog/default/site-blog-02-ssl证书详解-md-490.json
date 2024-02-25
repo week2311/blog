@@ -1,0 +1,44 @@
+{
+  "permalink": "/ssl证书详解",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/02-SSL证书详解.md",
+  "source": "@site/blog/02-SSL证书详解.md",
+  "title": "SSL证书详解",
+  "description": "在访问众多的网站中，相信大家都有遇到过下面的场景：",
+  "date": "2024-02-25T12:20:00.000Z",
+  "formattedDate": "2024年2月25日",
+  "tags": [
+    {
+      "label": "ssl",
+      "permalink": "/tags/ssl"
+    },
+    {
+      "label": "ca",
+      "permalink": "/tags/ca"
+    }
+  ],
+  "readingTime": 5.523333333333333,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Week",
+      "title": "静心",
+      "url": "https://github.com/week2311",
+      "imageURL": "/assets/images/social/avatar.png",
+      "key": "Week"
+    }
+  ],
+  "frontMatter": {
+    "slug": "ssl证书详解",
+    "title": "SSL证书详解",
+    "date": "2024-02-25 12:20",
+    "tags": [
+      "ssl",
+      "ca"
+    ],
+    "authors": "Week"
+  },
+  "nextItem": {
+    "title": "Docusaurus博客搭建",
+    "permalink": "/first-blog"
+  }
+}

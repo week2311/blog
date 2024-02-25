@@ -1,0 +1,43 @@
+{
+  "permalink": "/Blog-test1",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/02-Blog-test1.md",
+  "source": "@site/blog/02-Blog-test1.md",
+  "title": "Blog-test1",
+  "description": "介绍",
+  "date": "2024-02-15T19:20:00.000Z",
+  "formattedDate": "2024年2月15日",
+  "tags": [
+    {
+      "label": "test",
+      "permalink": "/tags/test"
+    }
+  ],
+  "readingTime": 0.016666666666666666,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Week",
+      "title": "静心",
+      "url": "https://github.com/week2311",
+      "imageURL": "/assets/images/social/avatar.png",
+      "key": "Week"
+    }
+  ],
+  "frontMatter": {
+    "slug": "Blog-test1",
+    "title": "Blog-test1",
+    "date": "2024-02-15 19:20",
+    "tags": [
+      "test"
+    ],
+    "authors": "Week"
+  },
+  "prevItem": {
+    "title": "Docusaurus博客搭建",
+    "permalink": "/first-blog"
+  },
+  "nextItem": {
+    "title": "Blog-test2",
+    "permalink": "/Blog-test2"
+  }
+}

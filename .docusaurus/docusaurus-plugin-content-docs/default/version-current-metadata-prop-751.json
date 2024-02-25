@@ -1,0 +1,40 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "stack": [
+      {
+        "type": "link",
+        "label": "README",
+        "href": "/docs/Stack",
+        "docId": "stack/introduction"
+      },
+      {
+        "type": "link",
+        "label": "Centos7系统---内核升级",
+        "href": "/docs/Centos7系统---内核升级",
+        "docId": "stack/kernel-update"
+      }
+    ]
+  },
+  "docs": {
+    "stack/introduction": {
+      "id": "stack/introduction",
+      "title": "README",
+      "description": "这里记录笔记",
+      "sidebar": "stack"
+    },
+    "stack/kernel-update": {
+      "id": "stack/kernel-update",
+      "title": "Centos7系统---内核升级",
+      "description": "前言",
+      "sidebar": "stack"
+    }
+  }
+}

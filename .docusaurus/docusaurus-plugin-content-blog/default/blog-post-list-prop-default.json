@@ -1,0 +1,13 @@
+{
+  "title": "最近更新",
+  "items": [
+    {
+      "title": "SSL证书详解",
+      "permalink": "/ssl证书详解"
+    },
+    {
+      "title": "Docusaurus博客搭建",
+      "permalink": "/first-blog"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "stack/kernel-update",
+  "id": "stack/kernel-update",
+  "title": "Centos7系统---内核升级",
+  "description": "前言",
+  "source": "@site/docs/stack/Centos7系统---内核升级.md",
+  "sourceDirName": "stack",
+  "slug": "/Centos7系统---内核升级",
+  "permalink": "/docs/Centos7系统---内核升级",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "kernel-update",
+    "slug": "/Centos7系统---内核升级",
+    "title": "Centos7系统---内核升级",
+    "last_update": {
+      "date": "2023/02/16"
+    }
+  },
+  "sidebar": "stack",
+  "previous": {
+    "title": "README",
+    "permalink": "/docs/Stack"
+  }
+}

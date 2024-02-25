@@ -1,0 +1,16 @@
+{
+  "type": "mdx",
+  "permalink": "/blog/first-blog",
+  "source": "@site/src/pages/blog/first-blog.md",
+  "title": "Docusaurus-Theme-Zen",
+  "description": "logo",
+  "frontMatter": {
+    "slug": "first-blog",
+    "title": "Docusaurus-Theme-Zen",
+    "date": "2023-04-12T14:09:58.000Z",
+    "tags": [
+      "阅读更多"
+    ],
+    "authors": "RiverMountain"
+  }
+}

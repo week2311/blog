@@ -1,0 +1,44 @@
+{
+  "permalink": "/first-blog",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/01-first-blog.md",
+  "source": "@site/blog/01-first-blog.md",
+  "title": "Docusaurus博客搭建",
+  "description": "网站由来",
+  "date": "2024-02-15T19:20:00.000Z",
+  "formattedDate": "2024年2月15日",
+  "tags": [
+    {
+      "label": "docusaurus-theme-zen",
+      "permalink": "/tags/docusaurus-theme-zen"
+    },
+    {
+      "label": "lifestyle",
+      "permalink": "/tags/lifestyle"
+    }
+  ],
+  "readingTime": 2.84,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Week",
+      "title": "静心",
+      "url": "https://github.com/week2311",
+      "imageURL": "/assets/images/social/avatar.png",
+      "key": "Week"
+    }
+  ],
+  "frontMatter": {
+    "slug": "first-blog",
+    "title": "Docusaurus博客搭建",
+    "date": "2024-02-15 19:20",
+    "tags": [
+      "docusaurus-theme-zen",
+      "lifestyle"
+    ],
+    "authors": "Week"
+  },
+  "prevItem": {
+    "title": "SSL证书详解",
+    "permalink": "/ssl证书详解"
+  }
+}

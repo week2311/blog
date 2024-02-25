@@ -1,0 +1,30 @@
+{
+  "unversionedId": "stack/test",
+  "id": "stack/test",
+  "title": "aaa",
+  "description": "这里记录笔记",
+  "source": "@site/docs/stack/test.md",
+  "sourceDirName": "stack",
+  "slug": "/test",
+  "permalink": "/docs/test",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "test",
+    "slug": "/test",
+    "title": "aaa",
+    "last_update": {
+      "date": "2023/04/22"
+    }
+  },
+  "sidebar": "stack",
+  "previous": {
+    "title": "README",
+    "permalink": "/docs/Stack"
+  },
+  "next": {
+    "title": "Centos7系统---内核升级",
+    "permalink": "/docs/Centos7系统---内核升级"
+  }
+}

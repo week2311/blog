@@ -1,0 +1,100 @@
+{
+  "blogPosts": [
+    {
+      "id": "ssl证书详解",
+      "metadata": {
+        "permalink": "/ssl证书详解",
+        "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/02-SSL证书详解.md",
+        "source": "@site/blog/02-SSL证书详解.md",
+        "title": "SSL证书详解",
+        "description": "在访问众多的网站中，相信大家都有遇到过下面的场景：",
+        "date": "2024-02-25T12:20:00.000Z",
+        "formattedDate": "2024年2月25日",
+        "tags": [
+          {
+            "label": "ssl",
+            "permalink": "/tags/ssl"
+          },
+          {
+            "label": "ca",
+            "permalink": "/tags/ca"
+          }
+        ],
+        "readingTime": 5.523333333333333,
+        "hasTruncateMarker": true,
+        "authors": [
+          {
+            "name": "Week",
+            "title": "静心",
+            "url": "https://github.com/week2311",
+            "imageURL": "/assets/images/social/avatar.png",
+            "key": "Week"
+          }
+        ],
+        "frontMatter": {
+          "slug": "ssl证书详解",
+          "title": "SSL证书详解",
+          "date": "2024-02-25 12:20",
+          "tags": [
+            "ssl",
+            "ca"
+          ],
+          "authors": "Week"
+        },
+        "nextItem": {
+          "title": "Docusaurus博客搭建",
+          "permalink": "/first-blog"
+        }
+      },
+      "content": "<!-- ![logo](/assets/images/avatar300.png) -->\r\n\r\n在访问众多的网站中，相信大家都有遇到过下面的场景：\r\n\r\n![ssl](https://cdn.jsdelivr.net/gh/week2311/Images@main/ssl.png)\r\n\r\n一般遇到这种情况，大多数都是点击高级继续访问，类似那种`无视风险继续安装`的意思。但其实这是浏览器在向你发出的一种警示信号，告诉你：访问这个IP地址的网站是不安全的。那么浏览器是如何得知的呢，答案就是`证书`。\r\n\r\n\r\n<!-- truncate -->\r\n## SSL协议\r\n\r\n首先我们先了解一下ssl协议：\r\n\r\n> SSL（Secure Sockets Layer）协议是一种用于在计算机网络上安全传输数据的协议。它使用加密技术来确保在客户端和服务器之间传输的数据是安全的，不会被未经授权的人员窃取或篡改。通常用于保护网站上的敏感信息，例如登录凭据、信用卡信息等。\r\n\r\n也就是说，这是一个信息传输过程中的安全加密协议，防止黑客的攻击，信息的泄露等。上图中的提示信息是如此，也是http+ssl协议实现了这样的效果。\r\n\r\n工作原理是通过在客户端和服务器之间建立安全的连接，然后使用加密算法对数据进行加密和解密。这样可以确保在数据传输过程中，即使被截获，也无法被破解。\r\n\r\n那么此时就有一个问题，如何去让一个服务，或者服务器得到信任呢？\r\n\r\n\r\n\r\n## CA证书\r\n\r\nCA证书用来标识服务器的一个合法身份，可以理解为的居民身份证。\r\n\r\n如何判断一个人是否是合法的中国公民 ----- 身份证\r\n\r\n如何判断一台服务器是否是合法的 ----- CA证书。\r\n\r\n现实生活中，身份证是由公安机颁发，那么一个人要拿到身份证，一般要经过以下流程：\r\n\r\n![person_card](https://cdn.jsdelivr.net/gh/week2311/Images@main/person_card.png)\r\n\r\n服务器领域中，CA证书是由CA机构（Certificate Authority，凭证管理中心）颁发的，那么要拿到CA机构颁发下来的证书，与上方的流程类型：\r\n\r\n![ca_card](https://cdn.jsdelivr.net/gh/week2311/Images@main/ca_card.png)\r\n\r\n### 申请证书\r\n\r\n根据上图，申请证书步骤如下：\r\n\r\n注：以下都是模拟证书的生成过程，真实情况一般不需要这么复杂，掏钱就行。\r\n\r\n1. 我们需要生成私钥，即非对称加密技术（下文会讲解）。\r\n\r\n```shell\r\nopenssl genrsa -out cert.key 1024\r\n```\r\n\r\n2. 创建证书申请文件.csr\r\n\r\n```shell\r\nopenssl req -new -key cert.key -out cert.csr\r\n# 在这一步骤中， 需要我们输入申请信息：国家，地区，组织，email等。\r\n```\r\n\r\n![csr](https://cdn.jsdelivr.net/gh/week2311/Images@main/csr.png)\r\n\r\n3. CA签发证书\r\n\r\n```shell\r\nopenssl x509 -req -days 365 -sha256 -in cert.csr -signkey cert.key -out cert.pem\r\n# 注解：\r\n# -days 365：证书有限期365天\r\n# -sha256：使用 SHA-256 哈希算法来对证书进行签名\r\n# -in cert.csr：指定申请文件路径\r\n# -sign cert.key：指定用于签名 CSR 的私钥文件的路径和名称\r\n# -out cert.pem：指定生成的证书文件的路径和名称\r\n```\r\n\r\n至此，在你的目录下，会多出来以下文件：\r\n\r\n```shell\r\n# cert.key：服务器私钥文件。\r\n# cert.csr：证书申请文件。\r\n# cert.pem：pem格式的证书文件，其中包含私钥，证书等秘密数据。\r\n```\r\n\r\n\r\n\r\n### 证书后缀\r\n\r\n有的时候，你会遇到这两种后缀的证书：.pem；.crt。二者都是证书文件扩展名，主要区别如下：\r\n\r\n1. PEM格式是一种基于Base64编码的ASCII文本格式，可以包含证书、私钥等多种格式的加密信息。\r\n2. PEM格式的证书常常用在Unix/Linux系统中，在Apache、Nginx等服务器软件中也广泛使用。\r\n\r\n3. CRT格式是一种二进制编码格式，主要用于Windows操作系统中的程序中，并且通常只包含证书信息。\r\n\r\n所以当看到这两种后缀的证书时，不要懵，其实都是证书文件。\r\n\r\n\r\n\r\n## 非对称加密\r\n\r\n`对称`：左右两边的图案，符号，数据等是一致的，称之为互相对称。那么在这里的`左`和`右`，可以理解为`客户端`和`服务器`，需要一致的对象是密钥，可以理解为同一把钥匙，才能解开数据。这种方式我们称之为`对称加密`。\r\n\r\n`非对称`：左右两边的图案，符号，数据等是不一致的，称之为非对称。那么在这里的`左`和`右`，可以理解为`客户端`和`服务器`，需要的对象是不同的密钥，才能解开数据。这种方式我们称之为`非对称加密`。\r\n\r\n在非对称加密中，密钥需要两个：公钥，私钥。\r\n\r\n* 公钥：顾名思义，就是公开的密钥，大家都可以得到。公钥负责加密数据\r\n* 私钥：不对外公开，特殊加密过的密钥。私钥负责解密数据\r\n\r\n只要通过私钥解开了公钥加密过的数据，那么就表示是被信任的，数据安全隧道才会建立。\r\n\r\n![encryption](https://cdn.jsdelivr.net/gh/week2311/Images@main/encryption.png)\r\n\r\n## HTTPS工作原理\r\n\r\n至此，我们知道SSL证书是为了解决数据明文传输不安全的风险：窃听风险，篡改风险，冒充风险。\r\n\r\n以HTTP为例，在未通过SSL加密时，数据传输模式：\r\n\r\n![image-20240220093754487](https://cdn.jsdelivr.net/gh/week2311/Images@main/risk.png)\r\n\r\n为了解决上述的问题，使用SSL进行数据加密传输，一开始是采用的是对称加密，但是这一方式还是存在安全风险。\r\n\r\n因为对称加密使用一对相同的密钥进行加密，解密。且密钥的传输是放在报文当中，也会使得中间人拦截，并篡改报文中的真密钥，返回假密钥给到客户端。\r\n\r\n那么如何保证数据的加，解密是唯一性的，且到达客户端的公钥是正确的呢？答案就是上文说到的`非对称加密`和`证书`。\r\n\r\n一图胜千言：\r\n\r\n![procedure](https://cdn.jsdelivr.net/gh/week2311/Images@main/procedure.png)\r\n\r\n根据图中描述可知，文章开头出现的情况，属于Client（浏览器）得到的证书是未被验证通过的，未知的证书。\r\n\r\n## 结语\r\n\r\n随着时间的转变，技术的迭代更新，SSL也出现了安全问题。后续出现了它的继任者--TLS协议，该协议在SSL的基础之上发展而来，得到了进一步的改进和优化。\r\n\r\n总之，SSL/TLS协议可以实现加强数据在传输过程的安全，不被窃取，监听等。在对安全性要求高的场景下，还会用到专业的安全硬件设备。毕竟数据是所有。\r\n\r\n\r\n\r\n参考链接：\r\n\r\n* https://baijiahao.baidu.com/s?id=1685474345600994715&wfr=spider&for=pc\r\n\r\n* https://blog.csdn.net/qq_60243891/article/details/132530818\r\n\r\n* https://blog.csdn.net/keeppractice/article/details/126975243\r\n\r\n## 📝License\r\n\r\n[MIT](./LICENSE) © Week 100%"
+    },
+    {
+      "id": "first-blog",
+      "metadata": {
+        "permalink": "/first-blog",
+        "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/01-first-blog.md",
+        "source": "@site/blog/01-first-blog.md",
+        "title": "Docusaurus博客搭建",
+        "description": "网站由来",
+        "date": "2024-02-15T19:20:00.000Z",
+        "formattedDate": "2024年2月15日",
+        "tags": [
+          {
+            "label": "docusaurus-theme-zen",
+            "permalink": "/tags/docusaurus-theme-zen"
+          },
+          {
+            "label": "lifestyle",
+            "permalink": "/tags/lifestyle"
+          }
+        ],
+        "readingTime": 2.84,
+        "hasTruncateMarker": true,
+        "authors": [
+          {
+            "name": "Week",
+            "title": "静心",
+            "url": "https://github.com/week2311",
+            "imageURL": "/assets/images/social/avatar.png",
+            "key": "Week"
+          }
+        ],
+        "frontMatter": {
+          "slug": "first-blog",
+          "title": "Docusaurus博客搭建",
+          "date": "2024-02-15 19:20",
+          "tags": [
+            "docusaurus-theme-zen",
+            "lifestyle"
+          ],
+          "authors": "Week"
+        },
+        "prevItem": {
+          "title": "SSL证书详解",
+          "permalink": "/ssl证书详解"
+        }
+      },
+      "content": "<!-- ![logo](/assets/images/avatar300.png) -->\n## 网站由来\n对于碎片化的信息，知识，一直都没有很好的整理。有做过文档笔记，但是查找起来很麻烦，有的时候还不如直接百度来的快，因此也出现了重复性的搜索，于是为了方便自己，提高效率，萌生了搭建博客的想法。\ndocusaurus博客框架符合我的美感，之前也看过其他的博客框架，例如Hero，Wiki，Wordpress，Hexo等，但都不太喜欢。\n于是开始了解docusaurus，但自身并不懂前端语言，于是就在看到了河山的博客，感觉很不错，接下来的工作就是进行二开了，经过了三，四天的修改，便有了今天的样貌。\n\n## 项目目录\n\n基于docusaurus搭建的主题，结合了简单易用与其他开源页面设计方案、支持MDX和React、可扩展和定制等优点，以及加上多设计美观、博客与文档一体的主题，为你提供了一个优秀的个人页面解决方案。该主题使用🦖 <a href=\"https://docusaurus.io/\">Docusaurus</a>搭建，遵循[MIT](./LICENSE)协议。\n\n<!-- truncate -->\n\n> This is a theme built with docusaurus, which combines the simplicity and ease of use of docusaurus with other open source page design solutions, supports MDX and React, is extensible and customizable, and also has a beautiful design, a blog and documentation integrated theme, providing you with an excellent personal page solution.\n\n\n## 项目目录\n\n```bash\n├── blog                           # 博客\n│   ├── first-blog.md\n│   └── authors.yml                # 作者信息(可以多个作者)\n├── docs                           # 文档/笔记\n│   └── stack\n│         └──introduction.md       # 笔记介绍\n├── data                           # 项目/导航/友链数据\n│   ├── friend.ts                  # 友链\n│   ├── project.ts                 # 项目\n│   └── resource.ts                # 资源导航\n├── i18n                           # 国际化\n├── src\n│   ├── components                 # 组件\n│   ├── css                        # 自定义CSS\n│   ├── pages                      # 自定义页面\n│   ├── plugin                     # 自定义插件\n│   └── theme                      # 自定义主题组件\n├── static                         # 静态资源文件\n│   └── assets                     # 静态文件\n├── docusaurus.config.js           # 站点的配置信息\n├── sidebars.js                    # 文档的侧边栏\n├── package.json\n└── yarn.lock                      # 建议使用yarn保留\n```\n\n## 安装\n\n克隆仓库并安装依赖\n```bash\ngit clone https://github.com/week2311/blog.git ./blog\ncd blog\nyarn\nyarn start\n```\n\n国内仓库备份\n```bash\ngit clone https://github.com/week2311/blog.git ./blog\ncd blog\nyarn\n```\n\n生成静态网页代码(./build)\n\n```bash\nyarn run build\n```\n\n启动服务\n```bash\nyarn run serve\n```\n\n## Netlify托管\n对于个人而言，购买一台服务器来运行项目无疑是一项不菲的支出，虽然有云服务器。\nNetlify很好的解决了这个问题，每个月有 免费的 100G 流量、300分钟的构建，还有全球的CDN节点，对于我来说已经很够用了。\n在Netlify官网，点击 Deploy to Netlify，根据官方步骤走了就行了，很方便快捷，但前提是你需要将项目放到github仓库，\n且需要有一个域名。\n\n## 域名访问\n虽然有白嫖的域名，但建议去买一个属于自己的域名，一是国内访问快速，稳定，二是不需要很多繁琐的申请，快速。\n而且一年也就一杯咖啡的钱，有的新用户也就1块钱，像我这个就是阿里云上购买申请的，还是很不错的。\nSSL证书的话，可以通过腾讯云上去申请免费1年的，获取证书文件，然后将文件内容替换netlify上的，即可实现https访问。\n\n## 📝License\n\n[MIT](./LICENSE) © Week 100%"
+    }
+  ]
+}
