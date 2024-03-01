@@ -19,6 +19,11 @@
               "id": "stack/kernel-update",
               "path": "/docs/Centos7系统---内核升级",
               "sidebar": "stack"
+            },
+            {
+              "id": "stack/time-sync",
+              "path": "/docs/时间同步服务",
+              "sidebar": "stack"
             }
           ],
           "draftIds": [],

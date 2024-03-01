@@ -67,6 +67,36 @@
               "previous": {
                 "title": "README",
                 "permalink": "/docs/Stack"
+              },
+              "next": {
+                "title": "时间同步服务",
+                "permalink": "/docs/时间同步服务"
+              }
+            },
+            {
+              "unversionedId": "stack/time-sync",
+              "id": "stack/time-sync",
+              "title": "时间同步服务",
+              "description": "前言",
+              "source": "@site/docs/stack/时间同步服务.md",
+              "sourceDirName": "stack",
+              "slug": "/时间同步服务",
+              "permalink": "/docs/时间同步服务",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "time-sync",
+                "slug": "/时间同步服务",
+                "title": "时间同步服务",
+                "last_update": {
+                  "date": "2024/03/01"
+                }
+              },
+              "sidebar": "stack",
+              "previous": {
+                "title": "Centos7系统---内核升级",
+                "permalink": "/docs/Centos7系统---内核升级"
               }
             }
           ],
@@ -80,6 +110,10 @@
               {
                 "type": "doc",
                 "id": "stack/kernel-update"
+              },
+              {
+                "type": "doc",
+                "id": "stack/time-sync"
               }
             ]
           }

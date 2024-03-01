@@ -109,8 +109,14 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '73f'),
+    component: ComponentCreator('/docs', 'a79'),
     routes: [
+      {
+        path: '/docs/时间同步服务',
+        component: ComponentCreator('/docs/时间同步服务', 'ed3'),
+        exact: true,
+        sidebar: "stack"
+      },
       {
         path: '/docs/Centos7系统---内核升级',
         component: ComponentCreator('/docs/Centos7系统---内核升级', '428'),

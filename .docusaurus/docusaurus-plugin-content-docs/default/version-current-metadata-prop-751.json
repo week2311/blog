@@ -20,6 +20,12 @@
         "label": "Centos7系统---内核升级",
         "href": "/docs/Centos7系统---内核升级",
         "docId": "stack/kernel-update"
+      },
+      {
+        "type": "link",
+        "label": "时间同步服务",
+        "href": "/docs/时间同步服务",
+        "docId": "stack/time-sync"
       }
     ]
   },
@@ -33,6 +39,12 @@
     "stack/kernel-update": {
       "id": "stack/kernel-update",
       "title": "Centos7系统---内核升级",
+      "description": "前言",
+      "sidebar": "stack"
+    },
+    "stack/time-sync": {
+      "id": "stack/time-sync",
+      "title": "时间同步服务",
       "description": "前言",
       "sidebar": "stack"
     }

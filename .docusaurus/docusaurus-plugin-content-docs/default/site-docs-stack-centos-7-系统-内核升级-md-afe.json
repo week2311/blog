@@ -22,5 +22,9 @@
   "previous": {
     "title": "README",
     "permalink": "/docs/Stack"
+  },
+  "next": {
+    "title": "时间同步服务",
+    "permalink": "/docs/时间同步服务"
   }
 }

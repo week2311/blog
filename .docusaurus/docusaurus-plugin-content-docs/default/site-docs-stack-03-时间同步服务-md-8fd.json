@@ -1,0 +1,15 @@
+{
+  "unversionedId": "stack/时间同步服务",
+  "id": "stack/时间同步服务",
+  "title": "时间同步服务",
+  "description": "××××年×月××日--\\时分，你在加班，解决着棘手的报错问题。",
+  "source": "@site/docs/stack/03-时间同步服务.md",
+  "sourceDirName": "stack",
+  "slug": "/stack/时间同步服务",
+  "permalink": "/docs/stack/时间同步服务",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {}
+}
