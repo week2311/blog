@@ -30,6 +30,7 @@ rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 
 yum --disablerepo="*" --enablerepo="elrepo-kernel" list available  # 查看可用的内核安装包
 ```
+![](https://cdn.jsdelivr.net/gh/week2311/Images@main/kernel.png)
 
 3. 安装内核
 
@@ -39,7 +40,6 @@ yum -y install kernel-lt --enablerepo=elrepo-kernel
 # 若是离线环境，则需要在有网环境提前下载好rpm包进行安装。
 ```
 
-![](https://cdn.jsdelivr.net/gh/week2311/Images@main/kernel.png)
 
 4. 修改默认启动项
 
