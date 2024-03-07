@@ -1,45 +1,4 @@
 {
-  "docusaurus-plugin-content-docs": {
-    "default": {
-      "path": "/docs",
-      "versions": [
-        {
-          "name": "current",
-          "label": "Next",
-          "isLast": true,
-          "path": "/docs",
-          "mainDocId": "stack/introduction",
-          "docs": [
-            {
-              "id": "stack/introduction",
-              "path": "/docs/Stack",
-              "sidebar": "stack"
-            },
-            {
-              "id": "stack/kernel-update",
-              "path": "/docs/Centos7系统---内核升级",
-              "sidebar": "stack"
-            },
-            {
-              "id": "stack/time-sync",
-              "path": "/docs/时间同步服务",
-              "sidebar": "stack"
-            }
-          ],
-          "draftIds": [],
-          "sidebars": {
-            "stack": {
-              "link": {
-                "path": "/docs/Stack",
-                "label": "stack/introduction"
-              }
-            }
-          }
-        }
-      ],
-      "breadcrumbs": true
-    }
-  },
   "docusaurus-plugin-content-blog": {
     "default": {
       "blogs": [
@@ -234,6 +193,47 @@
           ]
         }
       }
+    }
+  },
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "stack/introduction",
+          "docs": [
+            {
+              "id": "stack/introduction",
+              "path": "/docs/Stack",
+              "sidebar": "stack"
+            },
+            {
+              "id": "stack/kernel-update",
+              "path": "/docs/Centos7系统---内核升级",
+              "sidebar": "stack"
+            },
+            {
+              "id": "stack/time-sync",
+              "path": "/docs/时间同步服务",
+              "sidebar": "stack"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "stack": {
+              "link": {
+                "path": "/docs/Stack",
+                "label": "stack/introduction"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
     }
   }
 }
