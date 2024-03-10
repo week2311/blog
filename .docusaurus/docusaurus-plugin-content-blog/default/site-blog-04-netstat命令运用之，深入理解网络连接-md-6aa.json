@@ -1,0 +1,44 @@
+{
+  "permalink": "/Netstat命令运用之，深入理解网络连接",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/04-Netstat命令运用之，深入理解网络连接.md",
+  "source": "@site/blog/04-Netstat命令运用之，深入理解网络连接.md",
+  "title": "Netstat命令运用之，深入理解网络连接",
+  "description": "假设你要给朋友打一个电话，输入电话号码，之后朋友接通了电话，那么，通话过程就算是建立成功。这个接通的状态我们称之为ESTABLISHED。",
+  "date": "2024-03-10T21:50:00.000Z",
+  "formattedDate": "2024年3月10日",
+  "tags": [
+    {
+      "label": "tcp",
+      "permalink": "/tags/tcp"
+    },
+    {
+      "label": "netstat",
+      "permalink": "/tags/netstat"
+    }
+  ],
+  "readingTime": 7.1,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Week",
+      "title": "静心",
+      "url": "https://github.com/week2311",
+      "imageURL": "/assets/images/social/avatar.png",
+      "key": "Week"
+    }
+  ],
+  "frontMatter": {
+    "slug": "Netstat命令运用之，深入理解网络连接",
+    "title": "Netstat命令运用之，深入理解网络连接",
+    "date": "2024-03-10 21:50",
+    "tags": [
+      "tcp",
+      "netstat"
+    ],
+    "authors": "Week"
+  },
+  "nextItem": {
+    "title": "SSL证书详解",
+    "permalink": "/ssl证书详解"
+  }
+}

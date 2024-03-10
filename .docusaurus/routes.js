@@ -63,6 +63,11 @@ export default [
     exact: true
   },
   {
+    path: '/Netstat命令运用之，深入理解网络连接',
+    component: ComponentCreator('/Netstat命令运用之，深入理解网络连接', '08d'),
+    exact: true
+  },
+  {
     path: '/project/',
     component: ComponentCreator('/project/', '21d'),
     exact: true
@@ -103,8 +108,18 @@ export default [
     exact: true
   },
   {
+    path: '/tags/netstat',
+    component: ComponentCreator('/tags/netstat', 'ff8'),
+    exact: true
+  },
+  {
     path: '/tags/ssl',
     component: ComponentCreator('/tags/ssl', '004'),
+    exact: true
+  },
+  {
+    path: '/tags/tcp',
+    component: ComponentCreator('/tags/tcp', '391'),
     exact: true
   },
   {
@@ -133,7 +148,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '8f9'),
+    component: ComponentCreator('/', 'd6f'),
     exact: true
   },
   {

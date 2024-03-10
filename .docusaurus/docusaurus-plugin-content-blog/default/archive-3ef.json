@@ -1,6 +1,54 @@
 {
   "blogPosts": [
     {
+      "id": "Netstat命令运用之，深入理解网络连接",
+      "metadata": {
+        "permalink": "/Netstat命令运用之，深入理解网络连接",
+        "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/04-Netstat命令运用之，深入理解网络连接.md",
+        "source": "@site/blog/04-Netstat命令运用之，深入理解网络连接.md",
+        "title": "Netstat命令运用之，深入理解网络连接",
+        "description": "假设你要给朋友打一个电话，输入电话号码，之后朋友接通了电话，那么，通话过程就算是建立成功。这个接通的状态我们称之为ESTABLISHED。",
+        "date": "2024-03-10T21:50:00.000Z",
+        "formattedDate": "2024年3月10日",
+        "tags": [
+          {
+            "label": "tcp",
+            "permalink": "/tags/tcp"
+          },
+          {
+            "label": "netstat",
+            "permalink": "/tags/netstat"
+          }
+        ],
+        "readingTime": 7.1,
+        "hasTruncateMarker": true,
+        "authors": [
+          {
+            "name": "Week",
+            "title": "静心",
+            "url": "https://github.com/week2311",
+            "imageURL": "/assets/images/social/avatar.png",
+            "key": "Week"
+          }
+        ],
+        "frontMatter": {
+          "slug": "Netstat命令运用之，深入理解网络连接",
+          "title": "Netstat命令运用之，深入理解网络连接",
+          "date": "2024-03-10 21:50",
+          "tags": [
+            "tcp",
+            "netstat"
+          ],
+          "authors": "Week"
+        },
+        "nextItem": {
+          "title": "SSL证书详解",
+          "permalink": "/ssl证书详解"
+        }
+      },
+      "content": "<!-- ![logo](/assets/images/avatar300.png) -->\r\n\r\n\r\n\r\n假设你要给朋友打一个电话，输入电话号码，之后朋友接通了电话，那么，通话过程就算是建立成功。这个接通的状态我们称之为`ESTABLISHED`。\r\n\r\n不管是在Windows系统，还是Linux系统，功能的提供都依靠背后的进程。因此，读懂进程语言是重要的。\r\n\r\n在上面的例子中，如果建立通话过程中遇到了故障了，又会是哪些状态呢？\r\n\r\n<!-- truncate -->\r\n\r\n## 状态分类\r\n\r\n1. **LISTEN**：表示进程正在监听指定端口，等待其他进程发起连接请求。好比你的朋友家电话在等待其他人拨打过来。\r\n2. **ESTABLISHED**：表示连接已经建立并且数据可以传输。\r\n3. **TIME_WAIT**：表示进程在等待，以确保远程端接收到最后的确认。好比你在等待你的朋友接听。\r\n4. **CLOSE_WAIT**：表示连接已经关闭，但你还在等待朋友对电话做出回应。\r\n5. **FIN_WAIT1 和 FIN_WAIT2**：表示连接即将关闭或正在等待远程端的关闭信号，好比你正准备要挂断电话一样。\r\n6. **CLOSING**：表示连接关闭过程中可能出现问题，类似于拨打过程中出现异常情况。\r\n7. **LAST_ACK**：表示你拨打了电话，但还在等待朋友的确认。\r\n8. **SYN_SENT 和 SYN_RECV**：表示正在建立连接的过程中，好比你通话过程的建立中。\r\n9. **UNKNOWN**：表示状态未知，可能是系统出现异常，好比是信号塔出现了故障，导致电话信号无法发送，或者无法拨打。\r\n\r\n\r\n\r\n## 查看状态\r\n\r\n以Linux系统为例，使用`netstat`或者`ss`命令进行查看进程连接状态\r\n\r\n```shell\r\n# netstat 命令的基本用法和常用选项：\r\n-a（all）：显示所有连接和监听端口，包括那些处于等待连接的状态。\r\n-t（tcp）：仅显示 TCP 协议相关的连接信息。\r\n-u（udp）：仅显示 UDP 协议相关的连接信息。\r\n-n（numeric）：以数字形式显示地址和端口号，而不进行反向域名解析。\r\n-p（program）：显示与连接相关的进程信息。\r\n-e（extended）：显示额外的详细信息，如用户 ID 和 inode 等。\r\n-r（route）：显示路由表信息。\r\n-c（continuous）：持续显示网络状态信息，而非一次性输出。\r\n\r\n# 查看tcp协议的进程\r\n[root@localhost ~]# netstat -naplt\r\nActive Internet connections (servers and established)\r\nProto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    \r\ntcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      8955/php-fpm: maste \r\ntcp        0      0 0.0.0.0:3306            0.0.0.0:*               LISTEN      8159/mysqld         \r\ntcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      6768/sshd           \r\ntcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      7065/master         \r\ntcp        0      0 0.0.0.0:10050           0.0.0.0:*               LISTEN      9603/zabbix_agentd  \r\ntcp        0      0 0.0.0.0:10051           0.0.0.0:*               LISTEN      9722/zabbix_server  \r\ntcp        0      0 127.0.0.1:10050         127.0.0.1:51314         TIME_WAIT   -                   \r\ntcp        0      0 127.0.0.1:10050         127.0.0.1:51300         TIME_WAIT   -                 \r\ntcp        0      0 192.168.10.110:22       192.168.10.1:33819      ESTABLISHED 21143/sshd: root@pt \r\ntcp        0      0 127.0.0.1:10050         127.0.0.1:51278         TIME_WAIT   -                   \r\ntcp        0      0 127.0.0.1:10050         127.0.0.1:51296         TIME_WAIT   -                   \r\ntcp        0      0 127.0.0.1:10050         127.0.0.1:51346         TIME_WAIT   -                   \r\ntcp        0      0 127.0.0.1:10050         127.0.0.1:51318         TIME_WAIT   -                   \r\ntcp        0      0 192.168.10.110:22       192.168.10.1:1834       ESTABLISHED 7250/sshd: root@pts \r\n\r\n# 输出信息说明：\r\nProto：协议类型，如tcp或udp。\r\nRecv-Q：接收队列中的数据量（以字节为单位）。\r\nSend-Q：发送队列中的数据量（以字节为单位）。\r\nLocal Address：本地IP地址和端口号。\r\nForeign Address：远程IP地址和端口号。\r\nState：连接状态。\r\nPID/Program name：与连接关联的进程ID和程序名称\r\n\r\n============================================================================================================\r\n\r\n# ss 命令的基本用法和常用选项：\r\n-t：显示 TCP 套接字信息。\r\n-u：显示 UDP 套接字信息。\r\n-l：仅显示监听状态的套接字。\r\n-a：显示所有套接字（包括监听和非监听状态）。\r\n-p：显示与套接字关联的进程信息。\r\n-n：以数字形式显示地址和端口号，而不进行反向域名解析。\r\n-s：按照协议统计套接字数量。\r\n-o：显示计时器信息。\r\n-i：显示套接字的详细信息。\r\n\r\n# 查看tcp协议的进程\r\n[root@localhost ~]# ss -naptn\r\nState     Recv-Q  Send-Q      Local Address:Port    Peer Address:Port              \r\nLISTEN      0      50               *:3306      \t\t*:*   \t\t   users:((\"mysqld\",pid=7740,fd=14))\r\n\r\n# 输出信息说明：\r\ntate：连接状态，这里是LISTEN，表示该端口正在监听来自其他计算机的连接请求。\r\nRecv-Q：接收队列中的数据量（以字节为单位），这里是0。\r\nSend-Q：发送队列中的数据量（以字节为单位），这里是50。\r\nLocal Address:Port：本地IP地址和端口号，*:3306表示所有网络接口上的3306端口。\r\nPeer Address:Port：对等方的IP地址和端口号，*:*表示任意远程地址和端口。\r\nusers：进程相关信息，包括进程名称（mysqld）、进程ID（pid=7740）和文件描述符（fd=14）。\r\n```\r\n\r\n\r\n\r\n## 底层原理\r\n\r\n进程之间的连接，都是依靠套接字来进行的，在linux系统中一般以.sock结尾的文件，称之为套接字文件。\r\n\r\n套接字：是进程与网络之间的接口，通过网络中不同主机上的一端，到另一端的通信，数据交换的机制。就好比是上方例子的电话本身就是套接字的抽象。在套接字文件中，会包含通信的基本信息：IP，端口等，就好比是打电话你要输入对方的电话号码。\r\n\r\n在建立过程当中，有TCP会话建立，UDP会话建立，这种建立过程，一般分为三步，熟称为`三次握手`；建立解除，一般分为四步，熟称为`四次挥手`。\r\n\r\n\r\n\r\n一图胜千言：\r\n\r\n![netstat](https://cdn.jsdelivr.net/gh/week2311/Images@main/netstat.png)结合上图，\r\n\r\n三次握手流程：\r\n\r\n1. 第一次握手。客户端向服务器发送一个SYN标志位置为1的包，并且包含一个随机生成的序列号（seq number），发送完毕后，客户端进入SYN_SENT状态，等待服务器的确认。\r\n2. 第二次握手。服务器收到客户端的SYN包后，会发送一个SYN和ACK标志位都置为1的包，其中ACK number设置为客户端的seq number加1，确定是回复的来自客户端的包，同时服务器也会生成一个随机数作为初始发送序号（initial sequence number）。发送完毕后，服务器进入SYN_RCVD状态。\r\n3. 第三次握手。客户端收到服务器的SYN+ACK包后，会发送一个ACK标志位置为1的包，其中ACK number设置为服务器的seq number加1，表示客户端确认收到了服务器的数据。发送完毕后，客户端和服务器进入ESTABLISHED状态，完成三次握手。\r\n\r\n四次挥手流程：\r\n\r\n1. 第一次挥手（FIN_WAIT_1）：客户端发送一个FIN报文，并指定一个序列号。这标志着客户端准备关闭从服务器到客户端的数据传输。客户端进入FIN_WAIT_1状态，此时客户端不再发送数据，但仍可接收数据。12345\r\n\r\n2. 第二次挥手（CLOSE_WAIT）：服务器收到客户端的FIN后，会发送一个ACK报文，确认号设置为收到的序列号加1。服务器进入CLOSE_WAIT状态，这意味着服务器已经收到客户端的关闭请求，但服务器可能还有数据需要发送给客户端。\r\n\r\n1. 第三次挥手（LAST_ACK）：服务器发送一个FIN报文，并指定一个序列号，表示服务器准备关闭从客户端到服务器的数据传输。服务器进入LAST_ACK状态。\r\n2. 第四次挥手（TIME_WAIT）：客户端收到服务器的FIN后，会发送一个ACK报文，确认号设置为收到的序列号加1。客户端进入TIME_WAIT状态，并等待一段时间（2MSL，即Maximum Segment Lifetime，报文段最大寿命），以确保服务器收到ACK报文。这段时间之后，客户端和服务器都进入CLOSED状态，完成四次挥手。\r\n\r\n注：在这里说明一下，网络查询的时候，会发现握手，或者挥手的过程中，有的连接会多seq序列的字段，比如四次挥手的服务器的第一次发送请求包，其实这里我的理解是seq作用是标记自己，回包的时候ack确认回复会使用到。但有的时候会发送两次连接，也就是两个seq发送，每一次的值不同，那么回包的时候也就以最后一次为准，所以有时图中未标记出，表示并未很大作用，没有展示出来。\r\n\r\n\r\n\r\n## 总结\r\n\r\n通过阅读本文，希望能够帮助你能更进一步的了解进程之间的网络连接，并且能够根据状态信息，在日常运维或者排查错误时，可以带来更多的思路，想法等等。"
+    },
+    {
       "id": "ssl证书详解",
       "metadata": {
         "permalink": "/ssl证书详解",
@@ -40,6 +88,10 @@
             "ca"
           ],
           "authors": "Week"
+        },
+        "prevItem": {
+          "title": "Netstat命令运用之，深入理解网络连接",
+          "permalink": "/Netstat命令运用之，深入理解网络连接"
         },
         "nextItem": {
           "title": "Docusaurus博客搭建",

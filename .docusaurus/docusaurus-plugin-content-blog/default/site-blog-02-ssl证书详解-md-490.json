@@ -37,6 +37,10 @@
     ],
     "authors": "Week"
   },
+  "prevItem": {
+    "title": "Netstat命令运用之，深入理解网络连接",
+    "permalink": "/Netstat命令运用之，深入理解网络连接"
+  },
   "nextItem": {
     "title": "Docusaurus博客搭建",
     "permalink": "/first-blog"
