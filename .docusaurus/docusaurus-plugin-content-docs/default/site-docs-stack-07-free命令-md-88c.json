@@ -1,0 +1,15 @@
+{
+  "unversionedId": "stack/free命令",
+  "id": "stack/free命令",
+  "title": "free命令：内存查看",
+  "description": "统一查看内存信息：",
+  "source": "@site/docs/stack/07-free命令.md",
+  "sourceDirName": "stack",
+  "slug": "/stack/free命令",
+  "permalink": "/docs/stack/free命令",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {}
+}

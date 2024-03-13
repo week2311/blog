@@ -4,6 +4,9 @@ const sidebars = {
     'stack/introduction',
     'stack/kernel-update',
     'stack/time-sync',
+    'stack/lscpu',
+    'stack/free',
+    'stack/top',
     {
       // label: 'Docusaurus',
       // type: 'category',

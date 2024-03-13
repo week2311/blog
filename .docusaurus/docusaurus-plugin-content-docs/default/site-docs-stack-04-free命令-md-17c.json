@@ -1,0 +1,31 @@
+{
+  "unversionedId": "stack/free",
+  "id": "stack/free",
+  "title": "free命令",
+  "description": "free 命令是 Linux 系统中的一个实用工具，用于显示系统中的内存使用情况。通过运行 free 命令，您可以获取有关系统中可用内存、已使用内存以及缓存和交换空间的详细信息。",
+  "source": "@site/docs/stack/04-free命令.md",
+  "sourceDirName": "stack",
+  "slug": "/free",
+  "permalink": "/docs/free",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "free",
+    "slug": "/free",
+    "title": "free命令",
+    "last_update": {
+      "date": "2024/03/13"
+    }
+  },
+  "sidebar": "stack",
+  "previous": {
+    "title": "lscpu命令",
+    "permalink": "/docs/lscpu"
+  },
+  "next": {
+    "title": "top命令",
+    "permalink": "/docs/top"
+  }
+}

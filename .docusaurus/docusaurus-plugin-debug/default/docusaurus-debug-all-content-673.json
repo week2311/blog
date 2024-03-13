@@ -18,17 +18,49 @@
           "contentPathLocalized": "/root/blog/i18n/zh-CN/docusaurus-plugin-content-docs/current",
           "docs": [
             {
+              "unversionedId": "stack/free",
+              "id": "stack/free",
+              "title": "free命令",
+              "description": "free 命令是 Linux 系统中的一个实用工具，用于显示系统中的内存使用情况。通过运行 free 命令，您可以获取有关系统中可用内存、已使用内存以及缓存和交换空间的详细信息。",
+              "source": "@site/docs/stack/04-free命令.md",
+              "sourceDirName": "stack",
+              "slug": "/free",
+              "permalink": "/docs/free",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "id": "free",
+                "slug": "/free",
+                "title": "free命令",
+                "last_update": {
+                  "date": "2024/03/13"
+                }
+              },
+              "sidebar": "stack",
+              "previous": {
+                "title": "lscpu命令",
+                "permalink": "/docs/lscpu"
+              },
+              "next": {
+                "title": "top命令",
+                "permalink": "/docs/top"
+              }
+            },
+            {
               "unversionedId": "stack/introduction",
               "id": "stack/introduction",
               "title": "README",
               "description": "这里记录笔记",
-              "source": "@site/docs/stack/introduction.md",
+              "source": "@site/docs/stack/00-introduction.md",
               "sourceDirName": "stack",
               "slug": "/Stack",
               "permalink": "/docs/Stack",
               "draft": false,
               "tags": [],
               "version": "current",
+              "sidebarPosition": 0,
               "frontMatter": {
                 "id": "introduction",
                 "slug": "/Stack",
@@ -48,13 +80,14 @@
               "id": "stack/kernel-update",
               "title": "Centos7系统---内核升级",
               "description": "前言",
-              "source": "@site/docs/stack/Centos7系统---内核升级.md",
+              "source": "@site/docs/stack/01-Centos7系统---内核升级.md",
               "sourceDirName": "stack",
               "slug": "/Centos7系统---内核升级",
               "permalink": "/docs/Centos7系统---内核升级",
               "draft": false,
               "tags": [],
               "version": "current",
+              "sidebarPosition": 1,
               "frontMatter": {
                 "id": "kernel-update",
                 "slug": "/Centos7系统---内核升级",
@@ -74,17 +107,49 @@
               }
             },
             {
+              "unversionedId": "stack/lscpu",
+              "id": "stack/lscpu",
+              "title": "lscpu命令",
+              "description": "简介",
+              "source": "@site/docs/stack/03-lscpu命令.md",
+              "sourceDirName": "stack",
+              "slug": "/lscpu",
+              "permalink": "/docs/lscpu",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "id": "lscpu",
+                "slug": "/lscpu",
+                "title": "lscpu命令",
+                "last_update": {
+                  "date": "2024/03/13"
+                }
+              },
+              "sidebar": "stack",
+              "previous": {
+                "title": "时间同步服务",
+                "permalink": "/docs/时间同步服务"
+              },
+              "next": {
+                "title": "free命令",
+                "permalink": "/docs/free"
+              }
+            },
+            {
               "unversionedId": "stack/time-sync",
               "id": "stack/time-sync",
               "title": "时间同步服务",
               "description": "前言",
-              "source": "@site/docs/stack/时间同步服务.md",
+              "source": "@site/docs/stack/02-时间同步服务.md",
               "sourceDirName": "stack",
               "slug": "/时间同步服务",
               "permalink": "/docs/时间同步服务",
               "draft": false,
               "tags": [],
               "version": "current",
+              "sidebarPosition": 2,
               "frontMatter": {
                 "id": "time-sync",
                 "slug": "/时间同步服务",
@@ -97,6 +162,37 @@
               "previous": {
                 "title": "Centos7系统---内核升级",
                 "permalink": "/docs/Centos7系统---内核升级"
+              },
+              "next": {
+                "title": "lscpu命令",
+                "permalink": "/docs/lscpu"
+              }
+            },
+            {
+              "unversionedId": "stack/top",
+              "id": "stack/top",
+              "title": "top命令",
+              "description": "简介",
+              "source": "@site/docs/stack/05-top命令.md",
+              "sourceDirName": "stack",
+              "slug": "/top",
+              "permalink": "/docs/top",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "id": "top",
+                "slug": "/top",
+                "title": "top命令",
+                "last_update": {
+                  "date": "2024/03/13"
+                }
+              },
+              "sidebar": "stack",
+              "previous": {
+                "title": "free命令",
+                "permalink": "/docs/free"
               }
             }
           ],
@@ -114,6 +210,18 @@
               {
                 "type": "doc",
                 "id": "stack/time-sync"
+              },
+              {
+                "type": "doc",
+                "id": "stack/lscpu"
+              },
+              {
+                "type": "doc",
+                "id": "stack/free"
+              },
+              {
+                "type": "doc",
+                "id": "stack/top"
               }
             ]
           }
@@ -159,13 +267,13 @@
       },
       {
         "type": "jsx",
-        "permalink": "/resource/",
-        "source": "@site/src/pages/resource/index.tsx"
+        "permalink": "/project/",
+        "source": "@site/src/pages/project/index.tsx"
       },
       {
         "type": "jsx",
-        "permalink": "/project/",
-        "source": "@site/src/pages/project/index.tsx"
+        "permalink": "/resource/",
+        "source": "@site/src/pages/resource/index.tsx"
       }
     ]
   },

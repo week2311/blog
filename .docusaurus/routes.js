@@ -124,23 +124,41 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'a79'),
+    component: ComponentCreator('/docs', 'afe'),
     routes: [
       {
         path: '/docs/时间同步服务',
-        component: ComponentCreator('/docs/时间同步服务', 'ed3'),
+        component: ComponentCreator('/docs/时间同步服务', 'd46'),
         exact: true,
         sidebar: "stack"
       },
       {
         path: '/docs/Centos7系统---内核升级',
-        component: ComponentCreator('/docs/Centos7系统---内核升级', '428'),
+        component: ComponentCreator('/docs/Centos7系统---内核升级', '3a6'),
+        exact: true,
+        sidebar: "stack"
+      },
+      {
+        path: '/docs/free',
+        component: ComponentCreator('/docs/free', '2c4'),
+        exact: true,
+        sidebar: "stack"
+      },
+      {
+        path: '/docs/lscpu',
+        component: ComponentCreator('/docs/lscpu', '4e7'),
         exact: true,
         sidebar: "stack"
       },
       {
         path: '/docs/Stack',
-        component: ComponentCreator('/docs/Stack', '158'),
+        component: ComponentCreator('/docs/Stack', '041'),
+        exact: true,
+        sidebar: "stack"
+      },
+      {
+        path: '/docs/top',
+        component: ComponentCreator('/docs/top', '6c6'),
         exact: true,
         sidebar: "stack"
       }

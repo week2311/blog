@@ -1,0 +1,27 @@
+{
+  "unversionedId": "stack/introduction",
+  "id": "stack/introduction",
+  "title": "README",
+  "description": "这里记录笔记",
+  "source": "@site/docs/stack/00-introduction.md",
+  "sourceDirName": "stack",
+  "slug": "/Stack",
+  "permalink": "/docs/Stack",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "introduction",
+    "slug": "/Stack",
+    "title": "README",
+    "last_update": {
+      "date": "2023/04/22"
+    }
+  },
+  "sidebar": "stack",
+  "next": {
+    "title": "Centos7系统---内核升级",
+    "permalink": "/docs/Centos7系统---内核升级"
+  }
+}

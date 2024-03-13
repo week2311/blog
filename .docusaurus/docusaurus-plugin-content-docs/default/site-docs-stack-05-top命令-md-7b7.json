@@ -1,0 +1,27 @@
+{
+  "unversionedId": "stack/top",
+  "id": "stack/top",
+  "title": "top命令",
+  "description": "简介",
+  "source": "@site/docs/stack/05-top命令.md",
+  "sourceDirName": "stack",
+  "slug": "/top",
+  "permalink": "/docs/top",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "top",
+    "slug": "/top",
+    "title": "top命令",
+    "last_update": {
+      "date": "2024/03/13"
+    }
+  },
+  "sidebar": "stack",
+  "previous": {
+    "title": "free命令",
+    "permalink": "/docs/free"
+  }
+}

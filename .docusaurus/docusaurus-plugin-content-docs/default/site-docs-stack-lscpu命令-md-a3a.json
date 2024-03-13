@@ -1,0 +1,14 @@
+{
+  "unversionedId": "stack/lscpu命令",
+  "id": "stack/lscpu命令",
+  "title": "lscpu命令",
+  "description": "lscpu命令",
+  "source": "@site/docs/stack/lscpu命令.md",
+  "sourceDirName": "stack",
+  "slug": "/stack/lscpu命令",
+  "permalink": "/docs/stack/lscpu命令",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -11,6 +11,11 @@
           "mainDocId": "stack/introduction",
           "docs": [
             {
+              "id": "stack/free",
+              "path": "/docs/free",
+              "sidebar": "stack"
+            },
+            {
               "id": "stack/introduction",
               "path": "/docs/Stack",
               "sidebar": "stack"
@@ -21,8 +26,18 @@
               "sidebar": "stack"
             },
             {
+              "id": "stack/lscpu",
+              "path": "/docs/lscpu",
+              "sidebar": "stack"
+            },
+            {
               "id": "stack/time-sync",
               "path": "/docs/时间同步服务",
+              "sidebar": "stack"
+            },
+            {
+              "id": "stack/top",
+              "path": "/docs/top",
               "sidebar": "stack"
             }
           ],

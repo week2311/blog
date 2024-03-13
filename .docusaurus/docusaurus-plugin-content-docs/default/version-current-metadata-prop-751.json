@@ -26,10 +26,34 @@
         "label": "时间同步服务",
         "href": "/docs/时间同步服务",
         "docId": "stack/time-sync"
+      },
+      {
+        "type": "link",
+        "label": "lscpu命令",
+        "href": "/docs/lscpu",
+        "docId": "stack/lscpu"
+      },
+      {
+        "type": "link",
+        "label": "free命令",
+        "href": "/docs/free",
+        "docId": "stack/free"
+      },
+      {
+        "type": "link",
+        "label": "top命令",
+        "href": "/docs/top",
+        "docId": "stack/top"
       }
     ]
   },
   "docs": {
+    "stack/free": {
+      "id": "stack/free",
+      "title": "free命令",
+      "description": "free 命令是 Linux 系统中的一个实用工具，用于显示系统中的内存使用情况。通过运行 free 命令，您可以获取有关系统中可用内存、已使用内存以及缓存和交换空间的详细信息。",
+      "sidebar": "stack"
+    },
     "stack/introduction": {
       "id": "stack/introduction",
       "title": "README",
@@ -42,10 +66,22 @@
       "description": "前言",
       "sidebar": "stack"
     },
+    "stack/lscpu": {
+      "id": "stack/lscpu",
+      "title": "lscpu命令",
+      "description": "简介",
+      "sidebar": "stack"
+    },
     "stack/time-sync": {
       "id": "stack/time-sync",
       "title": "时间同步服务",
       "description": "前言",
+      "sidebar": "stack"
+    },
+    "stack/top": {
+      "id": "stack/top",
+      "title": "top命令",
+      "description": "简介",
       "sidebar": "stack"
     }
   }
