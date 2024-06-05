@@ -37,6 +37,10 @@
     ],
     "authors": "Week"
   },
+  "prevItem": {
+    "title": "Rocky Linux 9.3 系统安装",
+    "permalink": "/04-Rocky Linux 9.3 系统安装"
+  },
   "nextItem": {
     "title": "SSL证书详解",
     "permalink": "/ssl证书详解"

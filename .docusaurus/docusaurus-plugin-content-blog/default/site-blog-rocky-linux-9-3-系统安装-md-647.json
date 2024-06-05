@@ -1,0 +1,18 @@
+{
+  "permalink": "/Rocky Linux 9.3 系统安装",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/Rocky Linux 9.3 系统安装.md",
+  "source": "@site/blog/Rocky Linux 9.3 系统安装.md",
+  "title": "Rocky Linux 9.3 系统安装",
+  "description": "写在前面",
+  "date": "2024-06-05T13:30:55.362Z",
+  "formattedDate": "2024年6月5日",
+  "tags": [],
+  "readingTime": 3.986666666666667,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {},
+  "nextItem": {
+    "title": "Netstat命令运用之，深入理解网络连接",
+    "permalink": "/Netstat命令运用之，深入理解网络连接"
+  }
+}

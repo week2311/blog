@@ -64,7 +64,7 @@ export default [
   },
   {
     path: '/Netstat命令运用之，深入理解网络连接',
-    component: ComponentCreator('/Netstat命令运用之，深入理解网络连接', '08d'),
+    component: ComponentCreator('/Netstat命令运用之，深入理解网络连接', '699'),
     exact: true
   },
   {
@@ -75,6 +75,11 @@ export default [
   {
     path: '/resource/',
     component: ComponentCreator('/resource/', 'f18'),
+    exact: true
+  },
+  {
+    path: '/Rocky Linux 9.3 系统安装',
+    component: ComponentCreator('/Rocky Linux 9.3 系统安装', '41e'),
     exact: true
   },
   {
@@ -108,8 +113,18 @@ export default [
     exact: true
   },
   {
+    path: '/tags/linux',
+    component: ComponentCreator('/tags/linux', '10f'),
+    exact: true
+  },
+  {
     path: '/tags/netstat',
-    component: ComponentCreator('/tags/netstat', 'ff8'),
+    component: ComponentCreator('/tags/netstat', '49c'),
+    exact: true
+  },
+  {
+    path: '/tags/rocky',
+    component: ComponentCreator('/tags/rocky', 'af1'),
     exact: true
   },
   {
@@ -119,7 +134,7 @@ export default [
   },
   {
     path: '/tags/tcp',
-    component: ComponentCreator('/tags/tcp', '391'),
+    component: ComponentCreator('/tags/tcp', '1a9'),
     exact: true
   },
   {
@@ -166,7 +181,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'd6f'),
+    component: ComponentCreator('/', '118'),
     exact: true
   },
   {
