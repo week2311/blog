@@ -1,8 +1,18 @@
 [
   {
+    "label": "kubernetes",
+    "permalink": "/tags/kubernetes",
+    "count": 1
+  },
+  {
+    "label": "centos",
+    "permalink": "/tags/centos",
+    "count": 1
+  },
+  {
     "label": "rocky",
     "permalink": "/tags/rocky",
-    "count": 1
+    "count": 2
   },
   {
     "label": "linux",

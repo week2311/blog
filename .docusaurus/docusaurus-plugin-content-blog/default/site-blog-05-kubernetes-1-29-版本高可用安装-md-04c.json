@@ -1,0 +1,49 @@
+{
+  "permalink": "/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/05-Kubernetes1.29版本高可用安装.md",
+  "source": "@site/blog/05-Kubernetes1.29版本高可用安装.md",
+  "title": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+  "description": "rocky",
+  "date": "2024-06-24T19:40:00.000Z",
+  "formattedDate": "2024年6月24日",
+  "tags": [
+    {
+      "label": "kubernetes",
+      "permalink": "/tags/kubernetes"
+    },
+    {
+      "label": "centos",
+      "permalink": "/tags/centos"
+    },
+    {
+      "label": "rocky",
+      "permalink": "/tags/rocky"
+    }
+  ],
+  "readingTime": 28.673333333333332,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Week",
+      "title": "静心",
+      "url": "https://github.com/week2311",
+      "imageURL": "/assets/images/social/avatar.png",
+      "key": "Week"
+    }
+  ],
+  "frontMatter": {
+    "slug": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+    "title": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+    "date": "2024-06-24 19:40",
+    "tags": [
+      "kubernetes",
+      "centos",
+      "rocky"
+    ],
+    "authors": "Week"
+  },
+  "nextItem": {
+    "title": "Rocky Linux 9.3 系统安装",
+    "permalink": "/Rocky Linux 9.3 系统安装"
+  }
+}

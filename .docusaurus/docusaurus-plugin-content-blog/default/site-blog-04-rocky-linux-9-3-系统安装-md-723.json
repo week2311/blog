@@ -37,6 +37,10 @@
     ],
     "authors": "Week"
   },
+  "prevItem": {
+    "title": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+    "permalink": "/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜"
+  },
   "nextItem": {
     "title": "Netstat命令运用之，深入理解网络连接",
     "permalink": "/Netstat命令运用之，深入理解网络连接"

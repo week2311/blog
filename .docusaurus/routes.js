@@ -38,6 +38,11 @@ export default [
     exact: true
   },
   {
+    path: '/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜',
+    component: ComponentCreator('/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜', 'f73'),
+    exact: true
+  },
+  {
     path: '/about',
     component: ComponentCreator('/about', 'a5c'),
     exact: true
@@ -103,8 +108,18 @@ export default [
     exact: true
   },
   {
+    path: '/tags/centos',
+    component: ComponentCreator('/tags/centos', 'ece'),
+    exact: true
+  },
+  {
     path: '/tags/docusaurus-theme-zen',
     component: ComponentCreator('/tags/docusaurus-theme-zen', '8ec'),
+    exact: true
+  },
+  {
+    path: '/tags/kubernetes',
+    component: ComponentCreator('/tags/kubernetes', '94f'),
     exact: true
   },
   {
@@ -124,7 +139,7 @@ export default [
   },
   {
     path: '/tags/rocky',
-    component: ComponentCreator('/tags/rocky', 'af1'),
+    component: ComponentCreator('/tags/rocky', '23a'),
     exact: true
   },
   {
@@ -181,7 +196,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '118'),
+    component: ComponentCreator('/', '5a3'),
     exact: true
   },
   {

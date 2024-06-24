@@ -42,6 +42,14 @@
       "plugin": "plugin---docusaurus-debug-69-a-93b"
     }
   },
+  "/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜-f73": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "content": "content---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-04-c-ec8"
+  },
   "/about-a5c": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
@@ -52,7 +60,7 @@
   "/archive-b1a": {
     "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "archive": "archive---archive-2-e-8-25f"
   },
@@ -66,9 +74,9 @@
   "/first-blog-31d": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "content": "content---first-blogeaa-180"
   },
   "/friends/-b23": {
@@ -81,9 +89,9 @@
   "/Netstat命令运用之，深入理解网络连接-699": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "content": "content---netstat命令运用之，深入理解网络连接-082-3a5"
   },
   "/project/-21d": {
@@ -103,10 +111,10 @@
   "/Rocky Linux 9.3 系统安装-41e": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
-    "content": "content---04-rocky-linux-9-3-系统安装-723-273"
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "content": "content---rocky-linux-9-3-系统安装-723-a15"
   },
   "/search-d36": {
     "__comp": "__comp---theme-search-page-1-a-4-d6f",
@@ -117,25 +125,25 @@
   "/ssl证书详解-d0d": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "content": "content---ssl证书详解-490-960"
   },
   "/tags-2d9": {
     "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "tags": "tags---tagsc-57-e72"
   },
   "/tags/ca-d6e": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
         "content": "content---tags-caca-6-630"
@@ -144,12 +152,26 @@
     "tag": "tag---tags-ca-24-c-6b3",
     "listMetadata": "listMetadata---tags-ca-34-b-6f4"
   },
+  "/tags/centos-ece": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "items": [
+      {
+        "content": "content---tags-centosce-9-e52"
+      }
+    ],
+    "tag": "tag---tags-centos-029-bc3",
+    "listMetadata": "listMetadata---tags-centos-5-e-4-208"
+  },
   "/tags/docusaurus-theme-zen-8ec": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
         "content": "content---tags-docusaurus-theme-zen-14-d-c6c"
@@ -158,12 +180,26 @@
     "tag": "tag---tags-docusaurus-theme-zen-3-c-6-a9a",
     "listMetadata": "listMetadata---tags-docusaurus-theme-zen-732-b51"
   },
+  "/tags/kubernetes-94f": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "items": [
+      {
+        "content": "content---tags-centosce-9-e52"
+      }
+    ],
+    "tag": "tag---tags-kubernetescac-c69",
+    "listMetadata": "listMetadata---tags-kubernetes-9-f-7-42f"
+  },
   "/tags/lifestyle-b82": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
         "content": "content---tags-docusaurus-theme-zen-14-d-c6c"
@@ -175,12 +211,12 @@
   "/tags/linux-10f": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
-        "content": "content---384-746"
+        "content": "content---tags-linux-384-0a0"
       }
     ],
     "tag": "tag---tags-linuxb-1-a-63d",
@@ -189,9 +225,9 @@
   "/tags/netstat-49c": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
         "content": "content---tags-netstata-18-f18"
@@ -200,15 +236,18 @@
     "tag": "tag---tags-netstat-512-0c0",
     "listMetadata": "listMetadata---tags-netstat-2-de-da0"
   },
-  "/tags/rocky-af1": {
+  "/tags/rocky-23a": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
-        "content": "content---384-746"
+        "content": "content---tags-centosce-9-e52"
+      },
+      {
+        "content": "content---tags-linux-384-0a0"
       }
     ],
     "tag": "tag---tags-rockyabf-177",
@@ -217,9 +256,9 @@
   "/tags/ssl-004": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
         "content": "content---tags-caca-6-630"
@@ -231,9 +270,9 @@
   "/tags/tcp-1a9": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
         "content": "content---tags-netstata-18-f18"
@@ -273,15 +312,18 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-top-7-b-7-fea"
   },
-  "/-118": {
+  "/-5a3": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
-      "plugin": "plugin---04-rocky-linux-9-3-系统安装b-05-904"
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
-    "sidebar": "sidebar---04-rocky-linux-9-3-系统安装-814-f4f",
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
-        "content": "content---384-746"
+        "content": "content---tags-centosce-9-e52"
+      },
+      {
+        "content": "content---tags-linux-384-0a0"
       },
       {
         "content": "content---tags-netstata-18-f18"
