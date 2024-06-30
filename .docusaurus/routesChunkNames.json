@@ -71,6 +71,14 @@
     },
     "content": "content---blog-first-blog-28-a-7fe"
   },
+  "/CentOS7失宠，谁又会成为下一个甄嬛!-a8a": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "content": "content---cent-os-7-失宠，谁又会成为下一个甄嬛-fba-0d1"
+  },
   "/first-blog-31d": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
@@ -208,13 +216,16 @@
     "tag": "tag---tags-lifestyle-8-d-4-8b3",
     "listMetadata": "listMetadata---tags-lifestyle-39-c-286"
   },
-  "/tags/linux-10f": {
+  "/tags/linux-f63": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
+      {
+        "content": "content---tags-linux-3-ee-e0a"
+      },
       {
         "content": "content---tags-linux-384-0a0"
       }
@@ -236,13 +247,16 @@
     "tag": "tag---tags-netstat-512-0c0",
     "listMetadata": "listMetadata---tags-netstat-2-de-da0"
   },
-  "/tags/rocky-23a": {
+  "/tags/rocky-bf0": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
+      {
+        "content": "content---tags-linux-3-ee-e0a"
+      },
       {
         "content": "content---tags-centosce-9-e52"
       },
@@ -312,13 +326,16 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-top-7-b-7-fea"
   },
-  "/-5a3": {
+  "/-95a": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
+      {
+        "content": "content---tags-linux-3-ee-e0a"
+      },
       {
         "content": "content---tags-centosce-9-e52"
       },

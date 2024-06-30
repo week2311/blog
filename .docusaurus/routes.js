@@ -58,6 +58,11 @@ export default [
     exact: true
   },
   {
+    path: '/CentOS7失宠，谁又会成为下一个甄嬛!',
+    component: ComponentCreator('/CentOS7失宠，谁又会成为下一个甄嬛!', 'a8a'),
+    exact: true
+  },
+  {
     path: '/first-blog',
     component: ComponentCreator('/first-blog', '31d'),
     exact: true
@@ -129,7 +134,7 @@ export default [
   },
   {
     path: '/tags/linux',
-    component: ComponentCreator('/tags/linux', '10f'),
+    component: ComponentCreator('/tags/linux', 'f63'),
     exact: true
   },
   {
@@ -139,7 +144,7 @@ export default [
   },
   {
     path: '/tags/rocky',
-    component: ComponentCreator('/tags/rocky', '23a'),
+    component: ComponentCreator('/tags/rocky', 'bf0'),
     exact: true
   },
   {
@@ -196,7 +201,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '5a3'),
+    component: ComponentCreator('/', '95a'),
     exact: true
   },
   {

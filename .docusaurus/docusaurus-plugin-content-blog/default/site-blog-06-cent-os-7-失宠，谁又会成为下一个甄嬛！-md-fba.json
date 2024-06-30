@@ -1,0 +1,44 @@
+{
+  "permalink": "/CentOS7失宠，谁又会成为下一个甄嬛!",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/06-CentOS7失宠，谁又会成为下一个甄嬛！.md",
+  "source": "@site/blog/06-CentOS7失宠，谁又会成为下一个甄嬛！.md",
+  "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
+  "description": "rocky",
+  "date": "2024-07-01T11:45:00.000Z",
+  "formattedDate": "2024年7月1日",
+  "tags": [
+    {
+      "label": "rocky",
+      "permalink": "/tags/rocky"
+    },
+    {
+      "label": "linux",
+      "permalink": "/tags/linux"
+    }
+  ],
+  "readingTime": 3.8966666666666665,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Week",
+      "title": "静心",
+      "url": "https://github.com/week2311",
+      "imageURL": "/assets/images/social/avatar.png",
+      "key": "Week"
+    }
+  ],
+  "frontMatter": {
+    "slug": "CentOS7失宠，谁又会成为下一个甄嬛!",
+    "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
+    "date": "2024-07-01 11:45",
+    "tags": [
+      "rocky",
+      "linux"
+    ],
+    "authors": "Week"
+  },
+  "nextItem": {
+    "title": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+    "permalink": "/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜"
+  }
+}

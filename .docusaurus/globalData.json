@@ -59,6 +59,54 @@
     "default": {
       "blogs": [
         {
+          "id": "CentOS7失宠，谁又会成为下一个甄嬛!",
+          "metadata": {
+            "permalink": "/CentOS7失宠，谁又会成为下一个甄嬛!",
+            "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/06-CentOS7失宠，谁又会成为下一个甄嬛！.md",
+            "source": "@site/blog/06-CentOS7失宠，谁又会成为下一个甄嬛！.md",
+            "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
+            "description": "rocky",
+            "date": "2024-07-01T11:45:00.000Z",
+            "formattedDate": "2024年7月1日",
+            "tags": [
+              {
+                "label": "rocky",
+                "permalink": "/tags/rocky"
+              },
+              {
+                "label": "linux",
+                "permalink": "/tags/linux"
+              }
+            ],
+            "readingTime": 3.8966666666666665,
+            "hasTruncateMarker": true,
+            "authors": [
+              {
+                "name": "Week",
+                "title": "静心",
+                "url": "https://github.com/week2311",
+                "imageURL": "/assets/images/social/avatar.png",
+                "key": "Week"
+              }
+            ],
+            "frontMatter": {
+              "slug": "CentOS7失宠，谁又会成为下一个甄嬛!",
+              "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
+              "date": "2024-07-01 11:45",
+              "tags": [
+                "rocky",
+                "linux"
+              ],
+              "authors": "Week"
+            },
+            "nextItem": {
+              "title": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+              "permalink": "/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜"
+            }
+          },
+          "content": "<!-- ![logo](/assets/images/rockylinux.jpg) -->\r\n![rocky](/assets/images/甄嬛.jpg)\r\n\r\nCentOS 7.9即将于2024年6月30日到达其生命周期终点（EOL）。这位侍寝公司多年的宠妃也已风光不再。如今，各位技术界的“小主”们，需要赶紧为公司寻一位新的“得力宠妃”来接替她的位置，以保这后宫安稳。\r\n<!-- truncate -->\r\n终止的原因：\r\n\r\n1. Red Hat政策变更： 2020年12月，Red Hat宣布将终止CentOS Linux的开发，转而专注于CentOS Stream。这一决定直接影响了CentOS 7的长期支持计划。\r\n2. 资源重新分配： Red Hat选择将资源集中在CentOS Stream上，这是一个滚动发行版，位于Fedora和RHEL之间，作为RHEL的上游版本(即游戏领域的体验服)。\r\n3. 商业策略调整： 此举旨在鼓励更多用户转向付费的RHEL订阅，或参与到CentOS Stream的开发中来。\r\n\r\n总结就是: RH掀桌子了, 想用就付费！\r\n\r\n\r\n\r\n#### 挑选新系统:\r\n\r\n结合每一个系统的特点, 兼容性, 是否具备迁移方式, 进行筛选, 以下是不错的几个选择: \r\n\r\n| 系统名称                     | 背景                                     | 特点                                                         | 适用场景                                           | 迁移方式                                   |\r\n| ---------------------------- | ---------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------ |\r\n| Rocky Linux                  | CentOS的精神继承者，由原CentOS创始人领导  | • 100% RHEL兼容• 社区驱动• 多架构支持• 提供容器镜像 | 希望平滑过渡的CentOS用户，企业服务器和数据中心     | migrate2rocky工具，支持就地升级            |\r\n| AlmaLinux                    | 由CloudLinux公司赞助的CentOS替代品       | • RHEL兼容• 提供免费和付费支持• 实时内核版本• 安全增强特性 | 需要企业级支持，对安全性和实时性能有要求的用户     | ELevate项目支持从CentOS 7升级到AlmaLinux 8 |\r\n| Oracle Linux                 | 由Oracle支持和维护                       | • RHEL兼容• Ksplice零停机更新• UEK优化内核• 与Oracle Cloud集成 | 运行Oracle数据库和应用的环境，需要高性能的大型企业 | centos2ol脚本支持就地转换                  |\r\n| Ubuntu LTS                   | 由Canonical开发的通用型Linux发行版       | • 用户友好• 广泛的软件支持• Livepatch内核更新• 强大的云原生支持 | 开发环境、云计算场景、桌面到服务器的各种应用       | 需要重新安装，无直接迁移工具               |\r\n| RHEL                         | Red Hat的旗舰产品，企业级Linux标准       | • 顶级稳定性和支持• Red Hat Insights分析• 全面的安全特性• 与Red Hat生态系统集成 | 大型企业、关键业务系统、需要顶级支持的环境         | Convert2RHEL工具支持直接转换               |\r\n| SUSE Linux Enterprise Server | 面向企业的Linux解决方案                  | • 优秀的SAP支持• YaST配置工具• 长达13年的支持• 实时补丁功能 | 运行SAP的企业环境、需要长期支持的关键业务系统      | 需要重新安装，提供迁移指南和咨询服务       |\r\n| Debian                       | 完全自由的社区驱动发行版                 | • 高度稳定性• 庞大的软件仓库• 强大的包管理系统• 支持多种架构• 严格的自由软件准则 | 服务器环境、嵌入式系统、追求稳定性和自由软件的用户 | 需要重新安装，无直接从CentOS迁移的官方工具 |\r\n\r\n选择新系统就像选择一位长期伙伴,需要考虑多方面因素:\r\n\r\n1. 如果你是前 CentOS 用户，追求平稳过渡：Rocky Linux 或 AlmaLinux 是不错的选择, 兼容最好的还是Rocky。\r\n2. 对 Oracle 生态系统情有独钟：Oracle Linux 可能是你的最佳选择，但兼容性会差一点。\r\n3. 喜欢图形化，易用性和广泛的社区支持：Ubuntu LTS 值得考虑。\r\n4. 预算充足，需要顶级企业支持：RHEL 是公认的行业标准。\r\n5. 运行 SAP 或大型机环境：SUSE Linux Enterprise Server 可能更适合你。\r\n6. 追求自由和灵活，注重稳定性：Debian 会是一个理想的伙伴。它拥有强大的软件包管理系统和活跃的社区，为用户提供了高度的自定义和配置空间。\r\n\r\n\r\n\r\n结语\r\n\r\n国产操作系统这里就不做推荐了, 整体的体验都是换汤不换药, 再多的就不说了。另外还有一点，国内操作系统，每一家都有自己的技术规范，且体验不一定友好，其它的又是其它的规范，无法得到一个统一。不出问题还好，出了问题也只能依赖着系统厂家，在皮肤上面缝缝补补。"
+        },
+        {
           "id": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
           "metadata": {
             "permalink": "/一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
@@ -103,6 +151,10 @@
                 "rocky"
               ],
               "authors": "Week"
+            },
+            "prevItem": {
+              "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
+              "permalink": "/CentOS7失宠，谁又会成为下一个甄嬛!"
             },
             "nextItem": {
               "title": "Rocky Linux 9.3 系统安装",
@@ -317,6 +369,58 @@
         }
       ],
       "tags": {
+        "/tags/rocky": {
+          "label": "rocky",
+          "items": [
+            "CentOS7失宠，谁又会成为下一个甄嬛!",
+            "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+            "Rocky Linux 9.3 系统安装"
+          ],
+          "permalink": "/tags/rocky",
+          "pages": [
+            {
+              "items": [
+                "CentOS7失宠，谁又会成为下一个甄嬛!",
+                "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
+                "Rocky Linux 9.3 系统安装"
+              ],
+              "metadata": {
+                "permalink": "/tags/rocky",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 3,
+                "blogDescription": "docusaurus-theme-zen",
+                "blogTitle": "Blog"
+              }
+            }
+          ]
+        },
+        "/tags/linux": {
+          "label": "linux",
+          "items": [
+            "CentOS7失宠，谁又会成为下一个甄嬛!",
+            "Rocky Linux 9.3 系统安装"
+          ],
+          "permalink": "/tags/linux",
+          "pages": [
+            {
+              "items": [
+                "CentOS7失宠，谁又会成为下一个甄嬛!",
+                "Rocky Linux 9.3 系统安装"
+              ],
+              "metadata": {
+                "permalink": "/tags/linux",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 2,
+                "blogDescription": "docusaurus-theme-zen",
+                "blogTitle": "Blog"
+              }
+            }
+          ]
+        },
         "/tags/kubernetes": {
           "label": "kubernetes",
           "items": [
@@ -353,54 +457,6 @@
               ],
               "metadata": {
                 "permalink": "/tags/centos",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 1,
-                "blogDescription": "docusaurus-theme-zen",
-                "blogTitle": "Blog"
-              }
-            }
-          ]
-        },
-        "/tags/rocky": {
-          "label": "rocky",
-          "items": [
-            "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
-            "Rocky Linux 9.3 系统安装"
-          ],
-          "permalink": "/tags/rocky",
-          "pages": [
-            {
-              "items": [
-                "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",
-                "Rocky Linux 9.3 系统安装"
-              ],
-              "metadata": {
-                "permalink": "/tags/rocky",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 2,
-                "blogDescription": "docusaurus-theme-zen",
-                "blogTitle": "Blog"
-              }
-            }
-          ]
-        },
-        "/tags/linux": {
-          "label": "linux",
-          "items": [
-            "Rocky Linux 9.3 系统安装"
-          ],
-          "permalink": "/tags/linux",
-          "pages": [
-            {
-              "items": [
-                "Rocky Linux 9.3 系统安装"
-              ],
-              "metadata": {
-                "permalink": "/tags/linux",
                 "page": 1,
                 "postsPerPage": 10,
                 "totalPages": 1,
