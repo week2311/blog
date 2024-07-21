@@ -136,7 +136,7 @@
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
-    "content": "content---07-细梳-service：一文练就融会贯通da-9-efe"
+    "content": "content---serviceda-9-732"
   },
   "/ssl证书详解-d0d": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
@@ -204,7 +204,7 @@
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
-        "content": "content---f-25-26c"
+        "content": "content---tags-kubernetesf-25-da9"
       },
       {
         "content": "content---tags-centosce-9-e52"
@@ -286,7 +286,7 @@
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
-        "content": "content---f-25-26c"
+        "content": "content---tags-kubernetesf-25-da9"
       }
     ],
     "tag": "tag---tags-service-25-d-475",
@@ -359,7 +359,7 @@
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
       {
-        "content": "content---f-25-26c"
+        "content": "content---tags-kubernetesf-25-da9"
       },
       {
         "content": "content---tags-linux-3-ee-e0a"

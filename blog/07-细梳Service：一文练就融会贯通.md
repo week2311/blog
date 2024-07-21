@@ -170,8 +170,7 @@ Service:`my-nginx`被创建，查看`endpointslices`信息也都正确。此时�
 
 实践操作很简单，映射到底层的样貌，如下图所示；
 
-![service](C:\Users\Administrator\Desktop\service.png)
-
+![service](/assets/images/service.png)
 1. Master节点上，管理员通过`kubectl`命令等方式，创建Service，同时，自动创建同名的Endpoints/EndpointSlices，存储后端的Pod信息。
 2. 至此Service和EndpointSlices的使命已经结束，只是创建出一些数据而已。
 3. 每个节点上都由一个Kube-Proxy的组件，它的职责：定期监视`Service`和`EndpointSlices`的数据信息是否更新，删除，创建等，并自动创建/更新每个节点上的Iptables/Ipvs规则。
