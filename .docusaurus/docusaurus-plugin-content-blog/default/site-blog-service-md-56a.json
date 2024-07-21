@@ -1,0 +1,18 @@
+{
+  "permalink": "/Service",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/Service.md",
+  "source": "@site/blog/Service.md",
+  "title": "Service，Endpoint，无头，有状态，无状态",
+  "description": "Pod是Kubernetes集群中的最小调度单元。举例来说，Kubernetes是整个公司，定义了一系列的规章制度(功能)，而公司是由人构成的，去进行工作，也就是说，人是公司中的最小调度单元，Pod亦是如此：人的工作是写文档，做表格等；Pod的工作是管理运行应用程序（容器化）。",
+  "date": "2024-07-21T12:13:18.286Z",
+  "formattedDate": "2024年7月21日",
+  "tags": [],
+  "readingTime": 18.033333333333335,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {},
+  "nextItem": {
+    "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
+    "permalink": "/CentOS7失宠，谁又会成为下一个甄嬛!"
+  }
+}

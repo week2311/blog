@@ -130,6 +130,14 @@
       "plugin": "plugin---searchc-39-e64"
     }
   },
+  "/Service-6c0": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "content": "content---07-细梳-service：一文练就融会贯通da-9-efe"
+  },
   "/ssl证书详解-d0d": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
@@ -188,13 +196,16 @@
     "tag": "tag---tags-docusaurus-theme-zen-3-c-6-a9a",
     "listMetadata": "listMetadata---tags-docusaurus-theme-zen-732-b51"
   },
-  "/tags/kubernetes-94f": {
+  "/tags/kubernetes-a38": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
+      {
+        "content": "content---f-25-26c"
+      },
       {
         "content": "content---tags-centosce-9-e52"
       }
@@ -267,6 +278,20 @@
     "tag": "tag---tags-rockyabf-177",
     "listMetadata": "listMetadata---tags-rocky-010-16a"
   },
+  "/tags/service-45b": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "items": [
+      {
+        "content": "content---f-25-26c"
+      }
+    ],
+    "tag": "tag---tags-service-25-d-475",
+    "listMetadata": "listMetadata---tags-service-37-a-fec"
+  },
   "/tags/ssl-004": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
@@ -326,13 +351,16 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-top-7-b-7-fea"
   },
-  "/-95a": {
+  "/-2b9": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
+      {
+        "content": "content---f-25-26c"
+      },
       {
         "content": "content---tags-linux-3-ee-e0a"
       },

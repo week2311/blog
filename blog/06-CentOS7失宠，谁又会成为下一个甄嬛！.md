@@ -6,13 +6,13 @@ tags: [rocky,linux]
 authors: Week
 ---
 <!-- ![logo](/assets/images/rockylinux.jpg) -->
-![rocky](/assets/images/甄嬛.jpg)
 
 CentOS 7.9即将于2024年6月30日到达其生命周期终点（EOL）。这位侍寝公司多年的宠妃也已风光不再。如今，各位技术界的“小主”们，需要赶紧为公司寻一位新的“得力宠妃”来接替她的位置，以保这后宫安稳。
-<!-- truncate -->
+
 终止的原因：
 
 1. Red Hat政策变更： 2020年12月，Red Hat宣布将终止CentOS Linux的开发，转而专注于CentOS Stream。这一决定直接影响了CentOS 7的长期支持计划。
+<!-- truncate -->
 2. 资源重新分配： Red Hat选择将资源集中在CentOS Stream上，这是一个滚动发行版，位于Fedora和RHEL之间，作为RHEL的上游版本(即游戏领域的体验服)。
 3. 商业策略调整： 此举旨在鼓励更多用户转向付费的RHEL订阅，或参与到CentOS Stream的开发中来。
 

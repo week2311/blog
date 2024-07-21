@@ -3,7 +3,7 @@
   "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/06-CentOS7失宠，谁又会成为下一个甄嬛！.md",
   "source": "@site/blog/06-CentOS7失宠，谁又会成为下一个甄嬛！.md",
   "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
-  "description": "rocky",
+  "description": "CentOS 7.9即将于2024年6月30日到达其生命周期终点（EOL）。这位侍寝公司多年的宠妃也已风光不再。如今，各位技术界的“小主”们，需要赶紧为公司寻一位新的“得力宠妃”来接替她的位置，以保这后宫安稳。",
   "date": "2024-07-01T11:45:00.000Z",
   "formattedDate": "2024年7月1日",
   "tags": [
@@ -16,7 +16,7 @@
       "permalink": "/tags/linux"
     }
   ],
-  "readingTime": 3.8966666666666665,
+  "readingTime": 3.8833333333333333,
   "hasTruncateMarker": true,
   "authors": [
     {
@@ -36,6 +36,10 @@
       "linux"
     ],
     "authors": "Week"
+  },
+  "prevItem": {
+    "title": "细梳Service：一文练就融会贯通！",
+    "permalink": "/Service"
   },
   "nextItem": {
     "title": "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜",

@@ -98,6 +98,11 @@ export default [
     exact: true
   },
   {
+    path: '/Service',
+    component: ComponentCreator('/Service', '6c0'),
+    exact: true
+  },
+  {
     path: '/ssl证书详解',
     component: ComponentCreator('/ssl证书详解', 'd0d'),
     exact: true
@@ -124,7 +129,7 @@ export default [
   },
   {
     path: '/tags/kubernetes',
-    component: ComponentCreator('/tags/kubernetes', '94f'),
+    component: ComponentCreator('/tags/kubernetes', 'a38'),
     exact: true
   },
   {
@@ -145,6 +150,11 @@ export default [
   {
     path: '/tags/rocky',
     component: ComponentCreator('/tags/rocky', 'bf0'),
+    exact: true
+  },
+  {
+    path: '/tags/service',
+    component: ComponentCreator('/tags/service', '45b'),
     exact: true
   },
   {
@@ -201,7 +211,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '95a'),
+    component: ComponentCreator('/', '2b9'),
     exact: true
   },
   {
