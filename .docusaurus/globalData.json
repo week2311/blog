@@ -59,6 +59,101 @@
     "default": {
       "blogs": [
         {
+          "id": "kwok",
+          "metadata": {
+            "permalink": "/kwok",
+            "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/09-K8S集群构建而中道崩殂，这TM！还怎么运维.md",
+            "source": "@site/blog/09-K8S集群构建而中道崩殂，这TM！还怎么运维.md",
+            "title": "K8S集群构建而中道崩殂，这TM！还怎么运维",
+            "description": "在之前的KubeCon上，了解到Kwok技术，印象比较深刻，是因为它能够秒级去创建出上千个Node，Pod，当然这些是假的。",
+            "date": "2024-08-26T10:45:00.000Z",
+            "formattedDate": "2024年8月26日",
+            "tags": [
+              {
+                "label": "kubernetes",
+                "permalink": "/tags/kubernetes"
+              },
+              {
+                "label": "kwok",
+                "permalink": "/tags/kwok"
+              }
+            ],
+            "readingTime": 3.1,
+            "hasTruncateMarker": true,
+            "authors": [
+              {
+                "name": "Week",
+                "title": "静心",
+                "url": "https://github.com/week2311",
+                "imageURL": "/assets/images/social/avatar.png",
+                "key": "Week"
+              }
+            ],
+            "frontMatter": {
+              "slug": "kwok",
+              "title": "K8S集群构建而中道崩殂，这TM！还怎么运维",
+              "date": "2024-08-26 10:45",
+              "tags": [
+                "kubernetes",
+                "kwok"
+              ],
+              "authors": "Week"
+            },
+            "nextItem": {
+              "title": "K8S快问快答（一）",
+              "permalink": "/K8s-quicktalk"
+            }
+          },
+          "content": "在之前的KubeCon上，了解到Kwok技术，印象比较深刻，是因为它能够秒级去创建出上千个Node，Pod，当然这些是假的。\r\n\r\n但是它对于学习Kubernetes的人，资源不充足，或者模拟测试的场景，都非常友好。我就有一个体会，比如：我想对调度策略中的亲和性，进行一个实践操作，验证效果，但是前提是我得有一个Kubernetes集群。如果我有环境，那还好；如果没有，那浪费在搭建上的时间会很多。\r\n\r\n如果使用Kwok，我可以几秒钟完成搭建功能，并专注于实践，甚至我不需要虚拟机，直接安装在Windows/Mac中。\r\n\r\n<!-- truncate -->\r\n\r\n## 先看效果：\r\n\r\n我使用一台Rocky9.3的虚拟机，模拟20台虚机，和一套Pig的服务。\r\n\r\n![image-20240821164906397](https://bexp.135editor.com/files/users/1331/13319639/202408/9PRffXnS_IGSL.png?auth_key=1725206399-0-0-1306b2a73e91544dea7317eb8824a376)\r\n\r\n在这里，我可以自己通过yaml文件去创建资源，给节点打标签，污点等，去控制pod的一些行为等等，几乎与真实的k8s集群一样。Kwok模拟的是Apiserver的行为。\r\n\r\n\r\n\r\n## 安装,配置\r\n\r\nLinux上的安装方式：\r\n\r\n1. 容器运行时安装，见文章[1]\r\n\r\n   注意：安装版本要求：containerd >= 1.7；\r\n\r\n   ​\t  需要安装cni插件。\r\n\r\n2. 二进制安装kwok，见官网[2] 的`Binary Releases`安装步骤。\r\n\r\n3. 创建集群：\r\n\r\n   ```shell\r\n   kwokctl create cluster --kube-apiserver-image=registry.aliyuncs.com/google_containers/kube-apiserver:v1.29.6 --kube-controller-manager-image=registry.aliyuncs.com/google_containers/kube-controller-manager:v1.29.6 --kube-scheduler-image=registry.aliyuncs.com/google_containers/kube-scheduler:v1.29.6 --etcd-image=registry.aliyuncs.com/google_containers/etcd:3.5.11-0\r\n   ```\r\n\r\n   需要使用到控制面组件的镜像，用于模拟。指定镜像下载地址，默认是国外镜像仓库地址。\r\n\r\n   注：如果控制面的组件，都是用二进制安装的，则不需要指定镜像地址，默认优先使用二进制的。\r\n\r\n4. 创建node：\r\n\r\n   ```shell\r\n   kwokctl scale node --replicas 20 --config ~/.kwok/clusters/pig/kwok.yaml --name pig\r\n   ```\r\n\r\n   -c：指定配置文件位置。\r\n\r\n   --name：指定集群名称\r\n\r\n5. 创建Pod：\r\n\r\n   可以通过命令创建：\r\n\r\n   ```shell\r\n   kubectl create deployment pod --image=pod --replicas=5\r\n   ```\r\n\r\n   也可以通过编写好的yaml文件创建：\r\n\r\n   ```shell\r\n   kubectl apply -f pig-all.yaml\r\n   ```\r\n\r\n6. 结果：\r\n\r\n   ```shell\r\n   [root@localhost ~]# kubectl get no\r\n   NAME          STATUS   ROLES    AGE    VERSION\r\n   node-000000   Ready    master   92m    kwok-v0.6.0\r\n   node-000001   Ready    master   100m   kwok-v0.6.0\r\n   node-000002   Ready    master   98m    kwok-v0.6.0\r\n   node-000003   Ready    agent    98m    kwok-v0.6.0\r\n   node-000004   Ready    agent    98m    kwok-v0.6.0\r\n   node-000005   Ready    agent    98m    kwok-v0.6.0\r\n   node-000006   Ready    agent    98m    kwok-v0.6.0\r\n   node-000007   Ready    agent    98m    kwok-v0.6.0\r\n   node-000008   Ready    agent    98m    kwok-v0.6.0\r\n   node-000009   Ready    agent    98m    kwok-v0.6.0\r\n   node-000010   Ready    agent    98m    kwok-v0.6.0\r\n   node-000011   Ready    agent    98m    kwok-v0.6.0\r\n   node-000012   Ready    agent    98m    kwok-v0.6.0\r\n   node-000013   Ready    agent    98m    kwok-v0.6.0\r\n   node-000014   Ready    agent    98m    kwok-v0.6.0\r\n   node-000015   Ready    agent    98m    kwok-v0.6.0\r\n   node-000016   Ready    agent    98m    kwok-v0.6.0\r\n   node-000017   Ready    agent    98m    kwok-v0.6.0\r\n   node-000018   Ready    agent    98m    kwok-v0.6.0\r\n   node-000019   Ready    agent    98m    kwok-v0.6.0\r\n   \r\n   [root@localhost ~]# kubectl get pod -o wide -n pig \r\n   NAME                                      READY   STATUS    RESTARTS   AGE   IP          NODE          NOMINATED NODE   READINESS GATES\r\n   minio-854ddc8b4-7k4cq                     1/1     Running   0          71m   10.0.5.1    node-000005   <none>           <none>\r\n   pig-auth-7985cddf5-8t4x4                  1/1     Running   0          76m   10.0.13.1   node-000013   <none>           <none>\r\n   pig-codegen-6759fd865b-gx9pd              1/1     Running   0          72m   10.0.8.1    node-000008   <none>           <none>\r\n   pig-gateway-66b687d645-k4h6h              1/1     Running   0          77m   10.0.3.2    node-000003   <none>           <none>\r\n   pig-monitor-5777b76db9-2hfw8              1/1     Running   0          74m   10.0.11.2   node-000011   <none>           <none>\r\n   pig-mysql-df66c67f-wq8kp                  1/1     Running   0          84m   10.0.11.1   node-000011   <none>           <none>\r\n   pig-redis-6f58b56fd-gl5hw                 1/1     Running   0          84m   10.0.4.1    node-000004   <none>           <none>\r\n   pig-register-555859b5fb-2vk5r             1/1     Running   0          79m   10.0.3.1    node-000003   <none>           <none>\r\n   pig-sentinel-dashboard-678d6c454d-6qjfc   1/1     Running   0          73m   10.0.14.2   node-000014   <none>           <none>\r\n   pig-upms-biz-6f96fc46d-p2gm2              1/1     Running   0          75m   10.0.14.1   node-000014   <none>           <none>\r\n   pig-xxl-job-admin-69fc56b8cf-ltcxp        1/1     Running   0          71m   10.0.2.1    node-000002   <none>           <none>\r\n   ```\r\n   \r\n   \r\n\r\n## 脚本安装\r\n\r\n**安装过程太麻烦不想做？没关系，尝鲜的脚本已经编写好了。**\r\n\r\n**Kwok_Shell链接: https://pan.baidu.com/s/1N3XTNn52v3fm4tmCdjD5fw?pwd=LK79 \r\n提取码: LK79**\r\n\r\n![image-20240823165739143](https://bexp.135editor.com/files/users/1331/13319639/202408/pKejQuBN_AeeL.png?auth_key=1725206399-0-0-4d2dc97bf4e4abff2c52f15e67cee928)\r\n\r\n注意：当执行 \"kwokctl create\" 那个命令时，报错：\r\n\r\n```shell\r\nERROR Failed to setup config err=\"cmd wait: nerdctl create --name=kwok-kwok-etcd --pull=never --entrypoint=etcd --network=kwok-kwok --restart=unless-stopped --label=com.docker.compose.project=kwok-kwok --publish=32765:2379/tcp registry.aliyuncs.com/google_containers/etcd:3.5.11-0 --name=node0 --auto-compaction-retention=1 --quota-backend-bytes=8589934592 --data-dir=/etcd-data --initial-advertise-peer-urls=http://0.0.0.0:2380 --listen-peer-urls=http://0.0.0.0:2380 --advertise-client-urls=http://0.0.0.0:2379 --listen-client-urls=http://0.0.0.0:2379 --initial-cluster=node0=http://0.0.0.0:2380: exit status 1\\ntime=\\\"2024-08-23T16:53:23+08:00\\\" level=fatal msg=\\\"failed to verify networking settings: failed to create default network: subnet 10.4.0.0/24 overlaps with other one on this address space\\\"\\n\" cluster=kwok\r\n```\r\n\r\n此时手动执行一下报错信息中的nerdctl命令即可。这大概率是nerdctl命令本身的Bug，有时间可以提个issue。\r\n\r\n\r\n\r\n## 结语\r\n\r\n通过这个工具，我们能够以最小的资源模拟最大的效果，不管是k8s的初学者，模拟架构的资源使用，压测等场景都是一个方便的工具。\r\n\r\n\r\n\r\n---\r\n\r\n参考链接\r\n\r\n[1].https://mp.weixin.qq.com/s/ehKm7rvvxWCGgUm1etePOA\r\n\r\n[2].https://kwok.sigs.k8s.io/docs/user/installation/"
+        },
+        {
+          "id": "K8s-quicktalk",
+          "metadata": {
+            "permalink": "/K8s-quicktalk",
+            "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/08-K8S快问快答（一）.md",
+            "source": "@site/blog/08-K8S快问快答（一）.md",
+            "title": "K8S快问快答（一）",
+            "description": "一. k8s中所说的对象，资源是什么意思？",
+            "date": "2024-08-01T10:45:00.000Z",
+            "formattedDate": "2024年8月1日",
+            "tags": [
+              {
+                "label": "kubernetes",
+                "permalink": "/tags/kubernetes"
+              }
+            ],
+            "readingTime": 10.88,
+            "hasTruncateMarker": true,
+            "authors": [
+              {
+                "name": "Week",
+                "title": "静心",
+                "url": "https://github.com/week2311",
+                "imageURL": "/assets/images/social/avatar.png",
+                "key": "Week"
+              }
+            ],
+            "frontMatter": {
+              "slug": "K8s-quicktalk",
+              "title": "K8S快问快答（一）",
+              "date": "2024-08-01 10:45",
+              "tags": [
+                "kubernetes"
+              ],
+              "authors": "Week"
+            },
+            "prevItem": {
+              "title": "K8S集群构建而中道崩殂，这TM！还怎么运维",
+              "permalink": "/kwok"
+            },
+            "nextItem": {
+              "title": "细梳Service：一文练就融会贯通！",
+              "permalink": "/Service"
+            }
+          },
+          "content": "### 一. k8s中所说的对象，资源是什么意思？\r\n\r\n> 答：\r\n>\r\n> 对象：是你在k8s集群中能看到，能管理的实物，称之为对象。例如：Pod，Deployment，Service等。\r\n>\r\n> 资源：是k8s集群中定义的一系列，可以被创建，被使用，被查询等的事物，称之为资源。例如：上述的对象，无形的规则和配置等。\r\n>\r\n> 如果说k8s中的资源有哪些，你可以说：有Pod，Depolyment，Configmap等，因为这些是能够被使用的；\r\n>\r\n> 如何说k8s集群中Pod对象有哪些，可能是通过kubectl命令创建出来多个副本的Pod，每一个Pod都是Pod资源的对象，或者是持久化的实例。\r\n<!-- truncate -->\r\n\r\n\r\n### 二. Pod每次被创建，都会伴随一个Pause的容器产生，该容器的作用是什么？[1]\r\n\r\n> 答：Pause容器：又称Infra容器，Pause表面意思为暂停，即该容器是一个处于暂停状态的容器。\r\n>\r\n> ​\t作用1：\r\n>\r\n> ​\t\tPod是一个容器组，其中至少包含一个容器，Pod才能够被创建运行出来，若容器数为0，则Pod被当成销毁。Pause容器保证了Pod的存活，在意外情况下，即使Pod中的业务容器都被删除，因Pause一直是暂停容器，Pod也不会被当成销毁。除非手动删除Pod。\r\n>\r\n> ​\t作用2：\r\n>\r\n> ​\t\tPod是一个容器组，其中的容器都共享网络空间，而网络空间的创建，是由Pause去做的，其它容器只需要加入到Pause所在的网络空间中即可。\r\n>\r\n> ​\t作用3：\r\n>\r\n> ​\t\t同网络空间一样，Pod中的容器需要共用进程空间，即PID名称空间，也是由Pause创建，并作为Pod中，其它容器的第一个进程，即init进程。接管，回收各个容器所产生的僵尸进程。\r\n\r\n\r\n\r\n### 三. Pod健康检查的三种探针策略，以及各自的区别是什么？\r\n\r\n> 答：Liveness Probe：存活探针。\r\n>\r\n> ​      目的：确定Pod中的容器是否正在运行。\r\n>\r\n> ​      行为：根据探测的条件，如果探针探测失败，kubelet会杀死该容器，但是会受到容器的restartPolicy的影响。\r\n>\r\n> Readiness Probe：就绪探针。\r\n>\r\n> ​      目的：确定Pod中的容器是否准备好接受流量，或者说容器中的服务是否准备就绪。\r\n>\r\n> ​      行为：根据探测的条件，如果探针探测失败，endpoint控制器会将从与Pod匹配的所有Service的endpoint中删除该Pod的IP地址。\r\n>\r\n> ​            通过 kubectl get pod 查看，Pod的状态为Ready列：0/1，不就绪的状态。\r\n>\r\n> Startup Porbe：启动探针。\r\n>\r\n> ​      目的：确定容器中的服务是否已经启动。\r\n>\r\n> ​      行为：如果配置了启动探针，则会禁用掉其它所有的探针，直到它探测成功为止，如果探测失败，kubelet会杀死该容器，\r\n>\r\n> ​            但同样会受到容器的restartPolicy的影响。\r\n\r\nYaml示例：\r\n\r\n```shell\r\nspec:\r\n  containers:\r\n  - name: my-container\r\n    image: my-image\r\n    livenessProbe:\r\n      httpGet:\r\n        path: /healthz\r\n        port: 8080\r\n      initialDelaySeconds: 3\r\n      periodSeconds: 3\r\n    readinessProbe:\r\n      httpGet:\r\n        path: /ready\r\n        port: 8080\r\n      periodSeconds: 5\r\n    startupProbe:\r\n      httpGet:\r\n        path: /healthz\r\n        port: 8080\r\n      failureThreshold: 30\r\n      periodSeconds: 10\r\n```\r\n\r\n\r\n\r\n### 四. Pod中定义容器的restartPolicy三种重启策略，各自的区别，以及与探针的互相影响有哪些？\r\n\r\n> 答：三种重启策略：Always，OnFailure，Never\r\n>\r\n> ​\tAlways：论容器是因为什么原因退出，都会自动重启。\r\n>\r\n> ​\tOnFailure：只有当容器以非0状态码退出时，发生错误时，才会重启。\r\n>\r\n> ​\tNever：容器退出后，无论是什么原因，都不会重启。\r\n>\r\n> ​\t对探针的影响：\r\n>\r\n> ​\t如果是Liveness Probe探针失败导致容器需要重启：\r\n>\r\n> ​\t\t如果RestartPolicy是 Always 或 OnFailure，容器会被重启；\r\n>\r\n> ​\t\t如果是Never，容器不会重启，Pod将会保持在失败状态（但是由于受控制器的影响，保持期待，会再创建新的Pod来运行）。\r\n\r\nYaml示例：\r\n\r\n```shell\r\napiVersion: v1\r\nkind: Pod\r\nmetadata:\r\n  name: my-pod\r\nspec:\r\n  restartPolicy: OnFailure\r\n  containers:\r\n  - name: my-container\r\n    image: my-image\r\n    livenessProbe:\r\n      httpGet:\r\n        path: /healthz\r\n        port: 8080\r\n      initialDelaySeconds: 3\r\n      periodSeconds: 3\r\n```\r\n\r\n\r\n\r\n### 五. Qos服务质量是什么？[2]\r\n\r\n> 答：Qos服务质量：是根据是否对Pod设置了资源的请求(request)和限制(limit)，来去给Pod进行分类的机制。\r\n>\r\n> ​\t说人话就是：给Pod进行分类，这些Pod是一类，那些Pod是另一类，分类的标准：是否限制了Pod使用多少的内存/CPU。有限制的Pod是一类，没有限制的是另一类。根据分类，会去他们区别对待，有限制的好比是VIP客户，没有限制的是普通客户，当节点上资源不够时，要对他们进行驱离，则会先对最低类型的Pod动手。\r\n>\r\n> ​\tQos的类型有：\r\n>\r\n> ​\t\tGuaranteed（SVIP客户）：最高类型，在资源压力下，该类型的Pod是最后考虑驱逐的。\r\n>\r\n> ​\t\t\t划分标准：Pod定义了资源限制：即request和limit，且二者的值必须相等，这意味着该Pod分配了一个固定的资源值。\r\n>\r\n> ​\t\t\t\t\t  只有在Pod自身超过了限制的资源，或者没有更低优先级的Pod，才会考虑进行驱逐。\r\n>\r\n> ​\t\tBurstable（VIP客户）：一般类型，在资源压力下，该类型的Pod会在BestEffort类型Pod之后驱逐。\r\n>\r\n> ​\t\t\t划分标准：Pod至少定义了request资源请求，但没有设置limit限制。或者不符合Guaranteed和BestEffort划分标准的。\r\n>\r\n> ​\t\t\t\t\t  这样类型的Pod，由于没有limit限制，可以无限制使用节点资源，故也有隐患，在驱逐时，考虑倒数第二驱逐。\r\n>\r\n> ​\t\tBestEffort（普通客户）：最低级别，在资源压力下，该类型的Pod会首先被驱逐。\r\n>\r\n> ​\t\t\t划分标准：Pod没有设置 requests 和 limits。\r\n>\r\n> 要查看Pod属于哪一类型，可以使用`kubectl describe pod <pod名> -n 命名空间`查看：\t\r\n\r\n```shell\r\n$ kubectl describe pod test-7955cf7657-qh4wq -n test\r\n......\r\nQoS Class:                   BestEffort\r\nNode-Selectors:              <none>\r\nTolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s\r\n                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s\r\nEvents:\r\n......\r\n```\r\n\r\n\r\n\r\n### 六. Pod驱逐行为产生的原因，行为，影响都有哪些？[3]\r\n\r\n> 答：驱逐 字面意思是赶走；\r\n>\r\n> ​\tPod驱逐：将Pod从所在的节点上赶走。\r\n>\r\n> ​\t产生的原因：一般是由于节点压力导致的驱逐，即节点上的`内存`，`存储空间`，`进程可用进程数`的不足，为了保证核心程序，Pod，系统正常运行，不至于暴死，kubelet做的Pod销毁，释放资源空间的行为。\r\n>\r\n> ​\t行为：kubelet根据节点资源的使用情况，通过cgroup获取值，并与驱逐条件进行对比，超过阈值则产生驱逐行为。\r\n>\r\n> ​\t条件分为硬驱逐 和 软驱逐。\r\n>\r\n> * 硬驱逐：达到限制，kubelet会立即杀死Pod，且不会正常终止Pod，回收资源。类似kill -9\r\n> * 软驱逐：达到限制，kubelet不会立即杀死Pod，会给要“枪毙”的Pod一段时间，去做自己的善后事情，即正常终止Pod，回收资源。\r\n>\r\n> ​\tPod的驱逐顺序：\r\n>\r\n> ​\t\t1. 识别资源压力，确定需要释放的资源量\r\n>\r\n> ​\t\t2. 考虑资源使用超过请求的 Pods：\r\n>\r\n> ​\t\t\t* 所有 BestEffort Pods\r\n>\r\n> ​\t\t\t* 使用超过请求的 Burstable Pods，在这个组内，按 Pod 优先级排序，低优先级先驱逐\r\n>\r\n> ​\t\t3. 如果仍需要更多资源，考虑资源使用未超过请求的 Pods：\r\n>\r\n> ​\t\t\t* 使用未超过请求的 Burstable Pods，在这个组内，按 Pod 优先级排序，低优先级先驱逐\r\n>\r\n> ​\t\t\t* Guaranteed Pods（只有在极端情况下） 同样在这个组内，按 Pod 优先级排序，低优先级先驱逐\r\n>\r\n> ​\t\t4. 在整个过程中，kubelet 会持续评估是否已释放足够的资源\r\n\r\n\r\n\r\n### 七. Pod终止的相关时间有哪些？[4]\r\n\r\n> 答：Pod终止受到：体面终止周期时间的影响。\r\n>\r\n> ​\t体面终止周期：即给Pod中的所有容器在被杀死之前，做好自己的善后工作，比如请求的处理/连接的关闭，数据的清理等，的时间。默认是30s。\r\n>\r\n> ​\t如果终止周期/宽限期设置为0，则会立即终止，发生的行为会是ApiServer上会删除Pod的相关信息，但是Pod实现在在节点上运行的容器可能还在一直的运行着。\r\n>\r\n> ​\t且如果要强制终止/删除Pod，可以这样操作：\r\n\r\n```shell\r\nkubectl delete pod <pod-name> --grace-period=0 --force\r\n# --grace-period：设置宽限时间\r\n```\r\n\r\n\r\n\r\n### 八. Yaml文件中的**Annotations**和**Label**是什么，二者的区别。\r\n\r\n> 答：Annotations（注解）：是一种声明被创建的`资源`（例如Pod）元数据的机制。\r\n>\r\n> ​\t通俗的讲，就是你创建了一个Pod，那这个Pod的是谁创建的，什么时间创建的，使用的仓库地址是多少等一系列的信息，可以通过注解的方式去记录。这样做的好处，是能够让其它人一眼了解这个Pod的属性信息。\r\n>\r\n> 通过注解可以实现这样的目的。例如：\r\n\r\n```shell\r\napiVersion: apps/v1\r\nkind: Deployment\r\nmetadata:\r\n  name: my-website\r\n  annotations:\r\n    kubernetes.io/change-cause: \"Initial deployment of my website\"\r\n    owner: \"marketing-team@company.com\"\r\n    git-commit: \"abc123\"\r\n    deployment-date: \"2023-07-29\"\r\nspec:\r\n  replicas: 3\r\n  selector:\r\n    matchLabels:\r\n      app: my-website\r\n  template:\r\n    metadata:\r\n      labels:\r\n        app: my-website\r\n    spec:\r\n      containers:\r\n      - name: my-website\r\n        image: my-website:1.0\r\n        ports:\r\n        - containerPort: 80\r\n```\r\n\r\n> 类似添加描述信息的作用，功能（以上的owner等名称都可以自定义）。但这只是注解功能的其一。\r\n>\r\n> 另一个重要的功能是：配置管理/注入。\r\n>\r\n> 思考一下，如果我们在传统方式下，想要将nginx能接收的最大请求体大小为50M，这种情况，我们直接修改nginx.conf配置文件即可，但是在Pod中如何去做呢？\r\n>\r\n> 通过注解的方式，例如：\r\n\r\n```shell\r\napiVersion: networking.k8s.io/v1\r\nkind: Ingress\r\nmetadata:\r\n  name: example-ingress\r\n  annotations:\r\n    nginx.ingress.kubernetes.io/proxy-body-size: \"50m\"\r\n```\r\n\r\n> 注解的组成：前缀/名称:值。\r\n>\r\n> ​\t\t\t前缀规则：可选，如果使用，格式要符合有效的DNS域名格式（不会解析，只是要求格式要与DNS格式一致，结尾要有一个/）。\r\n>\r\n> ​\t\t    名称：必须存在，必须字母/数字开头和结尾，最多63个字符。\r\n>\r\n> \r\n>\r\n> ​\tLabel：主要用来对创建的集群`资源`进行一个筛选的功能。\r\n>\r\n> ​\t例如：你创建了10个pod，5个Pod是nginx，5个Pod是http。这个时候你如何只过滤去nginx的呢：可以给nginx Pod打标签，这样进行查询的使用，可以通过`kubectl get pod -n <名称空间名称> -l 标签名`去进行过滤查询。如下所示：\r\n\r\n```shell\r\napiVersion: v1\r\nkind: Pod\r\nmetadata:\r\n  name: nginx-pod-1\r\n  labels:\r\n    app: nginx\r\n    environment: production\r\n    \r\nkuebctl get pod -l app=nginx\r\n```\r\n\r\n​\t主要区别：\r\n\r\n| Annotations                    | Labels                         |\r\n| ------------------------------ | ------------------------------ |\r\n| 不用于选择和查询资源           | 用于选择和查询资源             |\r\n| 用于存储辅助信息，和配置管理   | 用于组织和分类资源             |\r\n| 命名规则相对宽松               | 有严格的命名规范：key: value   |\r\n| 相对静态，通常在资源创建时设置 | 可以发生改变，用于反应资源状态 |\r\n| API基本上忽略内容，只存储      | 被API服务器积极处理和验证      |\r\n\r\n\r\n\r\n### 九. kubectl create 和 apply 二者操作的区别是什么？\r\n\r\n答：\r\n\r\n| create                                        | apply                                                      |\r\n| --------------------------------------------- | ---------------------------------------------------------- |\r\n| 用于首次创建资源，如果资源存在，则报错        | 用于创建和更新资源，如果资源不存在则创建；如果已存在则更新 |\r\n| 命令式操作，直接告诉K8S创建一个资源，简单暴力 | 声明式操作，描述系统的期望状态，让系统决定如何达到这个状态 |\r\n| 适用于快速创建                                | 适用于管理复杂的应用部署，更新，版本控制                   |\r\n| 适用一次性操作或调试                          | 适用于生产环境                                             |\r\n\r\n\r\n\r\n### 十. 如何将一个不可用的节点设置成为不可调度，排空，并下线？\r\n\r\n答：流程如下:\r\n\r\n* 第一步：将节点设置为不可调度。防止新的Pod调度到该节点上。\r\n\r\n  ```shell\r\n  kubectl cordon <节点名>\r\n  ```\r\n\r\n* 第二步：排空节点上的Pod。\r\n\r\n  ```shell\r\n  kubectl drain <节点名> --ignore-daemonsets --delete-emptydir-data\r\n  \r\n  # --ignore-daemonsets：允许跳过DaemonSet管理的Pod\r\n  # --delete-emptydir-data：允许删除使用emptyDir卷的Pod\r\n  ```\r\n\r\n  注：你也完全可以直接执行kubectl drain操作，而省略cordon步骤。原因是：drain会先cordon之后，再尝试优雅地终止该节点上地Pod（排空）。\r\n\r\n* 第三步：确定节点已排空。\r\n\r\n  ```shell\r\n  # 检查节点状态\r\n  kubectl describe node <节点名>\r\n  # 重点关注部分：\r\n  # Unschedulabel：应该显示为true\r\n  # Taints：包含node.kubernetes.io/unschedulable:NoSchedule这个污点。\r\n  # Non-terminated Pods：这里应该只列出DaemonSet管理的Pod（如果有的话），其它类型都已驱逐。\r\n  \r\n  # 检查Pod都已排空，处理DaemonSet类型的Pod\r\n  Kubectl get pod -A -o wide | grep <节点IP>\r\n  ```\r\n\r\n* 第四步：从集群中删除节点。\r\n\r\n  ```shell\r\n  kubectl delete node <节点名>\r\n  ```\r\n\r\n* 第五步：后续该节点的DaemonSet类型的Pod，会由于该Pod的控制器监控到节点不存在，会强制终止该类型的Pod，垃圾回收。\r\n\r\n\r\n\r\n---\r\n\r\n## \t\t\t\t\t\t\t\t参考链接\r\n\r\n[1].https://www.51cto.com/article/767383.html\r\n\r\n[2].https://kubernetes.io/zh-cn/docs/concepts/workloads/pods/pod-qos/\r\n\r\n[3].https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/node-pressure-eviction/#eviction-signals-and-thresholds\r\n\r\n[4].https://kubernetes.io/zh-cn/docs/concepts/workloads/pods/pod-lifecycle/"
+        },
+        {
           "id": "Service",
           "metadata": {
             "permalink": "/Service",
@@ -98,6 +193,10 @@
                 "service"
               ],
               "authors": "Week"
+            },
+            "prevItem": {
+              "title": "K8S快问快答（一）",
+              "permalink": "/K8s-quicktalk"
             },
             "nextItem": {
               "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
@@ -424,6 +523,8 @@
         "/tags/kubernetes": {
           "label": "kubernetes",
           "items": [
+            "kwok",
+            "K8s-quicktalk",
             "Service",
             "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜"
           ],
@@ -431,6 +532,8 @@
           "pages": [
             {
               "items": [
+                "kwok",
+                "K8s-quicktalk",
                 "Service",
                 "一键搞定！Kubernetes1.29.6高可用部署指南，老少皆宜"
               ],
@@ -439,7 +542,30 @@
                 "page": 1,
                 "postsPerPage": 10,
                 "totalPages": 1,
-                "totalCount": 2,
+                "totalCount": 4,
+                "blogDescription": "docusaurus-theme-zen",
+                "blogTitle": "Blog"
+              }
+            }
+          ]
+        },
+        "/tags/kwok": {
+          "label": "kwok",
+          "items": [
+            "kwok"
+          ],
+          "permalink": "/tags/kwok",
+          "pages": [
+            {
+              "items": [
+                "kwok"
+              ],
+              "metadata": {
+                "permalink": "/tags/kwok",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
                 "blogDescription": "docusaurus-theme-zen",
                 "blogTitle": "Blog"
               }

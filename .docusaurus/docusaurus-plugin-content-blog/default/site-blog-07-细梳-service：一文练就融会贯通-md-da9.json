@@ -37,6 +37,10 @@
     ],
     "authors": "Week"
   },
+  "prevItem": {
+    "title": "K8S快问快答（一）",
+    "permalink": "/K8s-quicktalk"
+  },
   "nextItem": {
     "title": "CentOS7失宠，谁又会成为下一个甄嬛!",
     "permalink": "/CentOS7失宠，谁又会成为下一个甄嬛!"

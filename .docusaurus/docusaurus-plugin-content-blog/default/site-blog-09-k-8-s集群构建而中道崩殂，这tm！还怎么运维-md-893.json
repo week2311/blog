@@ -1,0 +1,44 @@
+{
+  "permalink": "/kwok",
+  "editUrl": "https://github.com/wrm244/docusaurus-theme-zen/edit/main/blog/09-K8S集群构建而中道崩殂，这TM！还怎么运维.md",
+  "source": "@site/blog/09-K8S集群构建而中道崩殂，这TM！还怎么运维.md",
+  "title": "K8S集群构建而中道崩殂，这TM！还怎么运维",
+  "description": "在之前的KubeCon上，了解到Kwok技术，印象比较深刻，是因为它能够秒级去创建出上千个Node，Pod，当然这些是假的。",
+  "date": "2024-08-26T10:45:00.000Z",
+  "formattedDate": "2024年8月26日",
+  "tags": [
+    {
+      "label": "kubernetes",
+      "permalink": "/tags/kubernetes"
+    },
+    {
+      "label": "kwok",
+      "permalink": "/tags/kwok"
+    }
+  ],
+  "readingTime": 3.1,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Week",
+      "title": "静心",
+      "url": "https://github.com/week2311",
+      "imageURL": "/assets/images/social/avatar.png",
+      "key": "Week"
+    }
+  ],
+  "frontMatter": {
+    "slug": "kwok",
+    "title": "K8S集群构建而中道崩殂，这TM！还怎么运维",
+    "date": "2024-08-26 10:45",
+    "tags": [
+      "kubernetes",
+      "kwok"
+    ],
+    "authors": "Week"
+  },
+  "nextItem": {
+    "title": "K8S快问快答（一）",
+    "permalink": "/K8s-quicktalk"
+  }
+}

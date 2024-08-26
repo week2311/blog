@@ -94,6 +94,22 @@
     },
     "config": "config---friends-5-e-9-f85"
   },
+  "/K8s-quicktalk-8a4": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "content": "content---k-8-s-quicktalk-92-c-0d6"
+  },
+  "/kwok-34e": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "content": "content---kwok-893-dbc"
+  },
   "/Netstat命令运用之，深入理解网络连接-699": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
@@ -196,13 +212,19 @@
     "tag": "tag---tags-docusaurus-theme-zen-3-c-6-a9a",
     "listMetadata": "listMetadata---tags-docusaurus-theme-zen-732-b51"
   },
-  "/tags/kubernetes-a38": {
+  "/tags/kubernetes-e56": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
+      {
+        "content": "content---tags-kubernetes-618-58f"
+      },
+      {
+        "content": "content---tags-kubernetes-580-00d"
+      },
       {
         "content": "content---tags-kubernetesf-25-da9"
       },
@@ -212,6 +234,20 @@
     ],
     "tag": "tag---tags-kubernetescac-c69",
     "listMetadata": "listMetadata---tags-kubernetes-9-f-7-42f"
+  },
+  "/tags/kwok-e0a": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
+    },
+    "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
+    "items": [
+      {
+        "content": "content---tags-kubernetes-618-58f"
+      }
+    ],
+    "tag": "tag---tags-kwok-070-a7d",
+    "listMetadata": "listMetadata---tags-kwok-276-f35"
   },
   "/tags/lifestyle-b82": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
@@ -351,13 +387,19 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-top-7-b-7-fea"
   },
-  "/-2b9": {
+  "/-3ca": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
       "plugin": "plugin---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜b-05-62c"
     },
     "sidebar": "sidebar---一键搞定！-kubernetes-1-29-6-高可用部署指南，老少皆宜-814-973",
     "items": [
+      {
+        "content": "content---tags-kubernetes-618-58f"
+      },
+      {
+        "content": "content---tags-kubernetes-580-00d"
+      },
       {
         "content": "content---tags-kubernetesf-25-da9"
       },

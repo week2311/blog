@@ -2,6 +2,14 @@
   "title": "最近更新",
   "items": [
     {
+      "title": "K8S集群构建而中道崩殂，这TM！还怎么运维",
+      "permalink": "/kwok"
+    },
+    {
+      "title": "K8S快问快答（一）",
+      "permalink": "/K8s-quicktalk"
+    },
+    {
       "title": "细梳Service：一文练就融会贯通！",
       "permalink": "/Service"
     },

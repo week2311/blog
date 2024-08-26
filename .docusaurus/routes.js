@@ -73,6 +73,16 @@ export default [
     exact: true
   },
   {
+    path: '/K8s-quicktalk',
+    component: ComponentCreator('/K8s-quicktalk', '8a4'),
+    exact: true
+  },
+  {
+    path: '/kwok',
+    component: ComponentCreator('/kwok', '34e'),
+    exact: true
+  },
+  {
     path: '/Netstat命令运用之，深入理解网络连接',
     component: ComponentCreator('/Netstat命令运用之，深入理解网络连接', '699'),
     exact: true
@@ -129,7 +139,12 @@ export default [
   },
   {
     path: '/tags/kubernetes',
-    component: ComponentCreator('/tags/kubernetes', 'a38'),
+    component: ComponentCreator('/tags/kubernetes', 'e56'),
+    exact: true
+  },
+  {
+    path: '/tags/kwok',
+    component: ComponentCreator('/tags/kwok', 'e0a'),
     exact: true
   },
   {
@@ -211,7 +226,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '2b9'),
+    component: ComponentCreator('/', '3ca'),
     exact: true
   },
   {

@@ -2,7 +2,12 @@
   {
     "label": "kubernetes",
     "permalink": "/tags/kubernetes",
-    "count": 2
+    "count": 4
+  },
+  {
+    "label": "kwok",
+    "permalink": "/tags/kwok",
+    "count": 1
   },
   {
     "label": "service",
